@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05BBA3EF1F316C8662A13FE8 /* Pods_BLEProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAC291DF4C738EF5F3B82C1 /* Pods_BLEProject.framework */; };
+		3640D1991F023667001415F0 /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3640D1971F023667001415F0 /* TestingViewController.swift */; };
+		3640D19A1F023667001415F0 /* TestingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3640D1981F023667001415F0 /* TestingViewController.xib */; };
+		3640D19D1F024230001415F0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3640D19C1F024230001415F0 /* UIView+Extension.swift */; };
+		3640D19F1F024263001415F0 /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3640D19E1F024263001415F0 /* UIView+IBInspectable.swift */; };
+		368765F61EFC9E77004082DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368765F51EFC9E77004082DB /* AppDelegate.swift */; };
+		368765F81EFC9E77004082DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368765F71EFC9E77004082DB /* ViewController.swift */; };
+		368765FB1EFC9E77004082DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368765F91EFC9E77004082DB /* Main.storyboard */; };
+		368765FD1EFC9E77004082DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 368765FC1EFC9E77004082DB /* Assets.xcassets */; };
+		368766001EFC9E77004082DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368765FE1EFC9E77004082DB /* LaunchScreen.storyboard */; };
+		3687660B1EFC9F18004082DB /* ScanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368766091EFC9F18004082DB /* ScanningViewController.swift */; };
+		3687660C1EFC9F18004082DB /* ScanningViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3687660A1EFC9F18004082DB /* ScanningViewController.xib */; };
+		3687660F1EFC9FA6004082DB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3687660E1EFC9FA6004082DB /* BaseViewController.swift */; };
+		368766131EFCA470004082DB /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368766111EFCA470004082DB /* DeviceTableViewCell.swift */; };
+		368766141EFCA470004082DB /* DeviceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368766121EFCA470004082DB /* DeviceTableViewCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1F130F43912325E999BFEFED /* Pods-BLEProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLEProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLEProject/Pods-BLEProject.debug.xcconfig"; sourceTree = "<group>"; };
+		3640D1971F023667001415F0 /* TestingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingViewController.swift; sourceTree = "<group>"; };
+		3640D1981F023667001415F0 /* TestingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestingViewController.xib; sourceTree = "<group>"; };
+		3640D19C1F024230001415F0 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		3640D19E1F024263001415F0 /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
+		368765F21EFC9E77004082DB /* BLEProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLEProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		368765F51EFC9E77004082DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		368765F71EFC9E77004082DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		368765FA1EFC9E77004082DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		368765FC1EFC9E77004082DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		368765FF1EFC9E77004082DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		368766011EFC9E77004082DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		368766091EFC9F18004082DB /* ScanningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScanningViewController.swift; path = Controller/ScanningViewController/ScanningViewController.swift; sourceTree = "<group>"; };
+		3687660A1EFC9F18004082DB /* ScanningViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ScanningViewController.xib; path = Controller/ScanningViewController/ScanningViewController.xib; sourceTree = "<group>"; };
+		3687660E1EFC9FA6004082DB /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		368766111EFCA470004082DB /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceTableViewCell.swift; path = Controller/ScanningViewController/CellDevice/DeviceTableViewCell.swift; sourceTree = "<group>"; };
+		368766121EFCA470004082DB /* DeviceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DeviceTableViewCell.xib; path = Controller/ScanningViewController/CellDevice/DeviceTableViewCell.xib; sourceTree = "<group>"; };
+		7EAC291DF4C738EF5F3B82C1 /* Pods_BLEProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLEProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA42912CB5FE2CB9D8D061B8 /* Pods-BLEProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLEProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLEProject/Pods-BLEProject.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		368765EF1EFC9E77004082DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05BBA3EF1F316C8662A13FE8 /* Pods_BLEProject.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2461086DFDFC9B06BDFC561B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EAC291DF4C738EF5F3B82C1 /* Pods_BLEProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3640D1961F02364C001415F0 /* TestVC  */ = {
+			isa = PBXGroup;
+			children = (
+				3640D1971F023667001415F0 /* TestingViewController.swift */,
+				3640D1981F023667001415F0 /* TestingViewController.xib */,
+			);
+			name = "TestVC ";
+			sourceTree = "<group>";
+		};
+		3640D19B1F0241F8001415F0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3640D19E1F024263001415F0 /* UIView+IBInspectable.swift */,
+				3640D19C1F024230001415F0 /* UIView+Extension.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		368765E91EFC9E77004082DB = {
+			isa = PBXGroup;
+			children = (
+				368765F41EFC9E77004082DB /* BLEProject */,
+				368765F31EFC9E77004082DB /* Products */,
+				515AFCFE270B9965A8544320 /* Pods */,
+				2461086DFDFC9B06BDFC561B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		368765F31EFC9E77004082DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				368765F21EFC9E77004082DB /* BLEProject.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		368765F41EFC9E77004082DB /* BLEProject */ = {
+			isa = PBXGroup;
+			children = (
+				3640D19B1F0241F8001415F0 /* Extension */,
+				368766081EFC9EF3004082DB /* Model */,
+				368766071EFC9EEC004082DB /* Controller */,
+				368765F51EFC9E77004082DB /* AppDelegate.swift */,
+				368765F71EFC9E77004082DB /* ViewController.swift */,
+				368765F91EFC9E77004082DB /* Main.storyboard */,
+				368765FC1EFC9E77004082DB /* Assets.xcassets */,
+				368765FE1EFC9E77004082DB /* LaunchScreen.storyboard */,
+				368766011EFC9E77004082DB /* Info.plist */,
+			);
+			path = BLEProject;
+			sourceTree = "<group>";
+		};
+		368766071EFC9EEC004082DB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3687660D1EFC9F1D004082DB /* ScanningVC */,
+				3687660E1EFC9FA6004082DB /* BaseViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		368766081EFC9EF3004082DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3687660D1EFC9F1D004082DB /* ScanningVC */ = {
+			isa = PBXGroup;
+			children = (
+				3640D1961F02364C001415F0 /* TestVC  */,
+				368766101EFCA430004082DB /* CellDevice */,
+				368766091EFC9F18004082DB /* ScanningViewController.swift */,
+				3687660A1EFC9F18004082DB /* ScanningViewController.xib */,
+			);
+			name = ScanningVC;
+			sourceTree = "<group>";
+		};
+		368766101EFCA430004082DB /* CellDevice */ = {
+			isa = PBXGroup;
+			children = (
+				368766111EFCA470004082DB /* DeviceTableViewCell.swift */,
+				368766121EFCA470004082DB /* DeviceTableViewCell.xib */,
+			);
+			name = CellDevice;
+			sourceTree = "<group>";
+		};
+		515AFCFE270B9965A8544320 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F130F43912325E999BFEFED /* Pods-BLEProject.debug.xcconfig */,
+				CA42912CB5FE2CB9D8D061B8 /* Pods-BLEProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		368765F11EFC9E77004082DB /* BLEProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 368766041EFC9E77004082DB /* Build configuration list for PBXNativeTarget "BLEProject" */;
+			buildPhases = (
+				EAA56FCF2486522C9DA1D644 /* [CP] Check Pods Manifest.lock */,
+				368765EE1EFC9E77004082DB /* Sources */,
+				368765EF1EFC9E77004082DB /* Frameworks */,
+				368765F01EFC9E77004082DB /* Resources */,
+				EDCA1C2D8DAC19C2DF494A70 /* [CP] Embed Pods Frameworks */,
+				14E035181CABCE2B09E41937 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BLEProject;
+			productName = BLEProject;
+			productReference = 368765F21EFC9E77004082DB /* BLEProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		368765EA1EFC9E77004082DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Anh Tuan";
+				TargetAttributes = {
+					368765F11EFC9E77004082DB = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 77G8PUN44T;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 368765ED1EFC9E77004082DB /* Build configuration list for PBXProject "BLEProject" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 368765E91EFC9E77004082DB;
+			productRefGroup = 368765F31EFC9E77004082DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				368765F11EFC9E77004082DB /* BLEProject */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		368765F01EFC9E77004082DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				368766001EFC9E77004082DB /* LaunchScreen.storyboard in Resources */,
+				3640D19A1F023667001415F0 /* TestingViewController.xib in Resources */,
+				368765FD1EFC9E77004082DB /* Assets.xcassets in Resources */,
+				368765FB1EFC9E77004082DB /* Main.storyboard in Resources */,
+				3687660C1EFC9F18004082DB /* ScanningViewController.xib in Resources */,
+				368766141EFCA470004082DB /* DeviceTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14E035181CABCE2B09E41937 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BLEProject/Pods-BLEProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAA56FCF2486522C9DA1D644 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EDCA1C2D8DAC19C2DF494A70 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BLEProject/Pods-BLEProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		368765EE1EFC9E77004082DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				368766131EFCA470004082DB /* DeviceTableViewCell.swift in Sources */,
+				3640D19D1F024230001415F0 /* UIView+Extension.swift in Sources */,
+				368765F81EFC9E77004082DB /* ViewController.swift in Sources */,
+				3687660F1EFC9FA6004082DB /* BaseViewController.swift in Sources */,
+				3640D1991F023667001415F0 /* TestingViewController.swift in Sources */,
+				3687660B1EFC9F18004082DB /* ScanningViewController.swift in Sources */,
+				3640D19F1F024263001415F0 /* UIView+IBInspectable.swift in Sources */,
+				368765F61EFC9E77004082DB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		368765F91EFC9E77004082DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				368765FA1EFC9E77004082DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		368765FE1EFC9E77004082DB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				368765FF1EFC9E77004082DB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		368766021EFC9E77004082DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		368766031EFC9E77004082DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		368766051EFC9E77004082DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F130F43912325E999BFEFED /* Pods-BLEProject.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 77G8PUN44T;
+				INFOPLIST_FILE = BLEProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anhtuan.BLEProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		368766061EFC9E77004082DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA42912CB5FE2CB9D8D061B8 /* Pods-BLEProject.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 77G8PUN44T;
+				INFOPLIST_FILE = BLEProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anhtuan.BLEProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		368765ED1EFC9E77004082DB /* Build configuration list for PBXProject "BLEProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				368766021EFC9E77004082DB /* Debug */,
+				368766031EFC9E77004082DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		368766041EFC9E77004082DB /* Build configuration list for PBXNativeTarget "BLEProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				368766051EFC9E77004082DB /* Debug */,
+				368766061EFC9E77004082DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 368765EA1EFC9E77004082DB /* Project object */;
+}
