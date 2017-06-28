@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let vc = ScanningViewController(nibName: "ScanningViewController", bundle: nil)
+        let vc2 = DisplayViewController(nibName: "DisplayViewController", bundle: nil)
         let nav = UINavigationController(rootViewController: vc)
         self.window?.rootViewController = nav
         self.window?.makeKeyAndVisible()

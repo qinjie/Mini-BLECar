@@ -7,4 +7,5 @@ target 'BLEProject' do
 
   # Pods for BLEProject
 pod 'MBProgressHUD', '~> 1.0.0'
+pod 'SwiftyJSON'
 end

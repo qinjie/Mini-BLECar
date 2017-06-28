@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		05BBA3EF1F316C8662A13FE8 /* Pods_BLEProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAC291DF4C738EF5F3B82C1 /* Pods_BLEProject.framework */; };
+		363A04261F03580700788FE9 /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A04241F03580700788FE9 /* DisplayViewController.swift */; };
+		363A04271F03580700788FE9 /* DisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 363A04251F03580700788FE9 /* DisplayViewController.xib */; };
+		363A042D1F037ADC00788FE9 /* UIColor-Hex-Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A042A1F037ADC00788FE9 /* UIColor-Hex-Swift.swift */; };
+		363A042E1F037ADC00788FE9 /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A042B1F037ADC00788FE9 /* UIView+IBInspectable.swift */; };
+		363A042F1F037ADC00788FE9 /* UIView+IRAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A042C1F037ADC00788FE9 /* UIView+IRAnimation.swift */; };
 		3640D1991F023667001415F0 /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3640D1971F023667001415F0 /* TestingViewController.swift */; };
 		3640D19A1F023667001415F0 /* TestingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3640D1981F023667001415F0 /* TestingViewController.xib */; };
-		3640D19D1F024230001415F0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3640D19C1F024230001415F0 /* UIView+Extension.swift */; };
-		3640D19F1F024263001415F0 /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3640D19E1F024263001415F0 /* UIView+IBInspectable.swift */; };
 		368765F61EFC9E77004082DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368765F51EFC9E77004082DB /* AppDelegate.swift */; };
 		368765F81EFC9E77004082DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368765F71EFC9E77004082DB /* ViewController.swift */; };
 		368765FB1EFC9E77004082DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368765F91EFC9E77004082DB /* Main.storyboard */; };
@@ -26,10 +29,13 @@
 
 /* Begin PBXFileReference section */
 		1F130F43912325E999BFEFED /* Pods-BLEProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLEProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLEProject/Pods-BLEProject.debug.xcconfig"; sourceTree = "<group>"; };
+		363A04241F03580700788FE9 /* DisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
+		363A04251F03580700788FE9 /* DisplayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisplayViewController.xib; sourceTree = "<group>"; };
+		363A042A1F037ADC00788FE9 /* UIColor-Hex-Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Hex-Swift.swift"; sourceTree = "<group>"; };
+		363A042B1F037ADC00788FE9 /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
+		363A042C1F037ADC00788FE9 /* UIView+IRAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+IRAnimation.swift"; sourceTree = "<group>"; };
 		3640D1971F023667001415F0 /* TestingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingViewController.swift; sourceTree = "<group>"; };
 		3640D1981F023667001415F0 /* TestingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestingViewController.xib; sourceTree = "<group>"; };
-		3640D19C1F024230001415F0 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		3640D19E1F024263001415F0 /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
 		368765F21EFC9E77004082DB /* BLEProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLEProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		368765F51EFC9E77004082DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		368765F71EFC9E77004082DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +72,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		363A04231F0357F500788FE9 /* DisplayVC */ = {
+			isa = PBXGroup;
+			children = (
+				363A04241F03580700788FE9 /* DisplayViewController.swift */,
+				363A04251F03580700788FE9 /* DisplayViewController.xib */,
+			);
+			name = DisplayVC;
+			sourceTree = "<group>";
+		};
 		3640D1961F02364C001415F0 /* TestVC  */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,8 +93,9 @@
 		3640D19B1F0241F8001415F0 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				3640D19E1F024263001415F0 /* UIView+IBInspectable.swift */,
-				3640D19C1F024230001415F0 /* UIView+Extension.swift */,
+				363A042A1F037ADC00788FE9 /* UIColor-Hex-Swift.swift */,
+				363A042B1F037ADC00788FE9 /* UIView+IBInspectable.swift */,
+				363A042C1F037ADC00788FE9 /* UIView+IRAnimation.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -121,6 +137,7 @@
 		368766071EFC9EEC004082DB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				363A04231F0357F500788FE9 /* DisplayVC */,
 				3687660D1EFC9F1D004082DB /* ScanningVC */,
 				3687660E1EFC9FA6004082DB /* BaseViewController.swift */,
 			);
@@ -228,6 +245,7 @@
 			files = (
 				368766001EFC9E77004082DB /* LaunchScreen.storyboard in Resources */,
 				3640D19A1F023667001415F0 /* TestingViewController.xib in Resources */,
+				363A04271F03580700788FE9 /* DisplayViewController.xib in Resources */,
 				368765FD1EFC9E77004082DB /* Assets.xcassets in Resources */,
 				368765FB1EFC9E77004082DB /* Main.storyboard in Resources */,
 				3687660C1EFC9F18004082DB /* ScanningViewController.xib in Resources */,
@@ -291,12 +309,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				368766131EFCA470004082DB /* DeviceTableViewCell.swift in Sources */,
-				3640D19D1F024230001415F0 /* UIView+Extension.swift in Sources */,
 				368765F81EFC9E77004082DB /* ViewController.swift in Sources */,
 				3687660F1EFC9FA6004082DB /* BaseViewController.swift in Sources */,
+				363A042D1F037ADC00788FE9 /* UIColor-Hex-Swift.swift in Sources */,
 				3640D1991F023667001415F0 /* TestingViewController.swift in Sources */,
 				3687660B1EFC9F18004082DB /* ScanningViewController.swift in Sources */,
-				3640D19F1F024263001415F0 /* UIView+IBInspectable.swift in Sources */,
+				363A042E1F037ADC00788FE9 /* UIView+IBInspectable.swift in Sources */,
+				363A04261F03580700788FE9 /* DisplayViewController.swift in Sources */,
+				363A042F1F037ADC00788FE9 /* UIView+IRAnimation.swift in Sources */,
 				368765F61EFC9E77004082DB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

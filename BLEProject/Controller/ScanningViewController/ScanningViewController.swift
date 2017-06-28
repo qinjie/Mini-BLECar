@@ -157,13 +157,19 @@ extension ScanningViewController : UITableViewDataSource, UITableViewDelegate {
     }
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         NSLog("Connecting to device is ready")
+//-------------------------------------Not working--------------------------------------------------
         let testVC = TestingViewController(nibName: "TestingViewController", bundle: nil)
         
         testVC.centralManager = self.centralManager
         testVC.connectingPeripheral = peripheral
-        
-        
         self.navigationController?.pushViewController(testVC, animated: true)
+        return
+//---------------------------------------------------------------------------------------------------
+        
+        let displayVC = DisplayViewController(nibName: "DisplayViewController", bundle: nil)
+        displayVC.centralManager = self.centralManager
+        displayVC.connectingPeripheral = peripheral
+        self.navigationController?.pushViewController(displayVC, animated: true)
         //peripheral.discoverServices(nil)
     }
     func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
@@ -195,12 +201,6 @@ extension ScanningViewController : UITableViewDataSource, UITableViewDelegate {
             let temp = Int(ambientTempC)
             
         }
-        
-        // 4
-        // convert the ambient temperature
-        
-        
-        // If the application is active and in the foreground, update the UI
     }
 }
 extension ScanningViewController : CBPeripheralDelegate {
