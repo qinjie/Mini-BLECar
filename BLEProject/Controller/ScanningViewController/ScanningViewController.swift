@@ -158,24 +158,26 @@ extension ScanningViewController : UITableViewDataSource, UITableViewDelegate {
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         NSLog("Connecting to device is ready")
 //-------------------------------------Not working--------------------------------------------------
-        let testVC = TestingViewController(nibName: "TestingViewController", bundle: nil)
-        
-        testVC.centralManager = self.centralManager
-        testVC.connectingPeripheral = peripheral
-        self.navigationController?.pushViewController(testVC, animated: true)
-        return
+//        let testVC = TestingViewController(nibName: "TestingViewController", bundle: nil)
+//        
+//        testVC.centralManager = self.centralManager
+//        testVC.connectingPeripheral = peripheral
+//        self.navigationController?.pushViewController(testVC, animated: true)
+//        return
 //---------------------------------------------------------------------------------------------------
         
         let displayVC = DisplayViewController(nibName: "DisplayViewController", bundle: nil)
         displayVC.centralManager = self.centralManager
-        displayVC.connectingPeripheral = peripheral
-        self.navigationController?.pushViewController(displayVC, animated: true)
+        displayVC.connectingPeripheral = peripheral        
+        self.present(displayVC, animated: true) { 
+            
+        }
+//        self.navigationController?.pushViewController(displayVC, animated: true)
         //peripheral.discoverServices(nil)
     }
     func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
         NSLog("Connect is fail")
     }
-    
     func updateHeart(data:NSData){
         let dataLength = data.length / MemoryLayout<UInt16>.size
         

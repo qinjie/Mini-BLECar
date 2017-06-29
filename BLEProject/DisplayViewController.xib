@@ -12,6 +12,18 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DisplayViewController" customModule="BLEProject" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewValueXa" destination="ea9-eh-uJm" id="AF7-oU-3kk"/>
+                <outlet property="viewValueXg" destination="zOM-0U-Djb" id="lIb-Jy-UbZ"/>
+                <outlet property="viewValueYa" destination="Ewz-ST-nd0" id="JHG-UL-9J7"/>
+                <outlet property="viewValueYg" destination="LGu-0W-mAY" id="wf7-By-8U3"/>
+                <outlet property="viewValueZa" destination="F5N-aD-ogw" id="MsQ-JE-ufu"/>
+                <outlet property="viewValueZg" destination="cnP-hG-LZn" id="Ogi-lY-VzA"/>
+                <outlet property="viewXa" destination="Hbe-Xp-WCd" id="Y1U-hg-gaE"/>
+                <outlet property="viewXg" destination="44P-d3-Wuc" id="zCD-tB-GMT"/>
+                <outlet property="viewYa" destination="iYx-cd-rox" id="R04-9s-tpd"/>
+                <outlet property="viewYg" destination="zCb-Un-G53" id="xxC-MP-tgu"/>
+                <outlet property="viewZa" destination="iai-LQ-EjO" id="5SG-iT-HFe"/>
+                <outlet property="viewZg" destination="m0Z-Kf-zLq" id="grn-Zq-cHZ"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -36,11 +48,23 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kj0-t7-4zy">
+                            <rect key="frame" x="8" y="14.5" width="30" height="35"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                            <state key="normal" title="X">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="closeTouchUp:" destination="-1" eventType="touchUpInside" id="t02-PC-lgn"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="xH1-Eq-TVF" firstAttribute="centerY" secondItem="g7z-w9-tki" secondAttribute="centerY" id="GQr-yr-ad7"/>
                         <constraint firstAttribute="height" constant="64" id="NmY-1I-cSq"/>
+                        <constraint firstItem="Kj0-t7-4zy" firstAttribute="leading" secondItem="g7z-w9-tki" secondAttribute="leading" constant="8" id="TKV-Xr-Gbg"/>
+                        <constraint firstItem="Kj0-t7-4zy" firstAttribute="centerY" secondItem="g7z-w9-tki" secondAttribute="centerY" id="iBj-NF-A68"/>
                         <constraint firstItem="xH1-Eq-TVF" firstAttribute="centerX" secondItem="g7z-w9-tki" secondAttribute="centerX" id="iaq-ib-9eI"/>
                     </constraints>
                 </view>
@@ -524,7 +548,7 @@
                             <rect key="frame" x="310" y="237" width="46" height="30"/>
                             <state key="normal" title="Button"/>
                             <connections>
-                                <action selector="sendTouchUp:" destination="-1" eventType="touchUpInside" id="iY7-Se-jIA"/>
+                                <action selector="sendTouchUp:" destination="-1" eventType="touchUpInside" id="DBF-hg-7EK"/>
                             </connections>
                         </button>
                     </subviews>

@@ -12,7 +12,25 @@ import SwiftyJSON
 
 class DisplayViewController: UIViewController {
     
+    @IBOutlet weak var viewXg: UIView!
+    @IBOutlet weak var viewValueXg: UIView!
     
+    @IBOutlet weak var viewYg: UIView!
+    @IBOutlet weak var viewValueYg: UIView!
+    
+    @IBOutlet weak var viewZg: UIView!
+    @IBOutlet weak var viewValueZg: UIView!
+    
+    @IBOutlet weak var viewXa: UIView!
+    @IBOutlet weak var viewValueXa: UIView!
+    
+    @IBOutlet weak var viewYa: UIView!
+    @IBOutlet weak var viewValueYa: UIView!
+    
+    @IBOutlet weak var viewZa: UIView!
+    @IBOutlet weak var viewValueZa: UIView!
+
+    var result = ""
     var centralManager : CBCentralManager?
     var connectingPeripheral : CBPeripheral?
     var characterictist : CBCharacteristic?
@@ -68,7 +86,6 @@ class DisplayViewController: UIViewController {
     }
     
     func update(value : CGFloat, viewChild : UIView, viewParent: UIView){
-        NSLog("\(value)")
         let x = viewChild.frame.origin.x
         let y = viewChild.frame.origin.y
         let height = viewChild.frame.height
@@ -79,37 +96,79 @@ class DisplayViewController: UIViewController {
     }
     
     @IBAction func sendTouchUp(_ sender : UIButton){
-        self.sendData(arr: [0,1,2,3,4,5])
+        var a : [Int] = []
+        for _ in 0 ..< 6 {
+            let rand = Int.random(from: 100, to: 65535)            
+            a.append(Int(rand))
+        }
+        self.sendData(arr: a)
+    }
+    
+    @IBAction func closeTouchUp(_ sender : UIButton){
+        self.dismiss(animated: true) { 
+            
+        }
     }
     
     func sendData(arr : [Int]) {
+        self.result = ""
         if ((self.connectingPeripheral != nil) && (self.characterictist != nil)) {
-            let json = self.createJSON(arr: arr)
-            do {
-                let data = "ABC".data(using: String.Encoding.utf8)
-                self.connectingPeripheral?.writeValue(data!, for: self.characterictist!, type: CBCharacteristicWriteType.withoutResponse)
-                self.connectingPeripheral?.readValue(for: self.characterictist!)
-                /*
-                let data = try json.rawData()
-                let json = JSON.init(data: data)
-                self.connectingPeripheral?.writeValue(data, for: self.characterictist!, type: CBCharacteristicWriteType.withoutResponse)
-                */
-                //self.connectingPeripheral?.readValue(for: self.characterictist!)
-            } catch {
-                NSLog("Error")
+            var str = ""
+            for i in 0 ..< arr.count - 1 {
+                str = str + "\(arr[i])" + " "
             }
+            str = str + "\(arr[arr.count - 1])" + "\n"
+            NSLog("Send:   \(str)    \(self.characterictist?.uuid.uuidString)")
+            let data = str.data(using: String.Encoding.ascii)
+            
+            self.connectingPeripheral?.writeValue(data!, for: self.characterictist!, type: CBCharacteristicWriteType.withoutResponse)            
         }
+    }
+    
+    func displayValue(arr : [CGFloat]){
+        self.update(value: CGFloat(arr[0]), viewChild: viewValueXg, viewParent: viewXg)
+        self.update(value: CGFloat(arr[1]), viewChild: viewValueYg, viewParent: viewYg)
+        self.update(value: CGFloat(arr[2]), viewChild: viewValueZg, viewParent: viewZg)
+        self.update(value: CGFloat(arr[3]), viewChild: viewValueXa, viewParent: viewXa)
+        self.update(value: CGFloat(arr[4]), viewChild: viewValueYa, viewParent: viewYa)
+        self.update(value: CGFloat(arr[5]), viewChild: viewValueZa, viewParent: viewZa)
     }
 }
 
+extension DisplayViewController : CBCentralManagerDelegate {
+    func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
+        let alertVC = UIAlertController(title: "Warning", message: "\(error?.localizedDescription)", preferredStyle: UIAlertControllerStyle.alert)
+        self.show(alertVC, sender: nil)
+        
+    }
+    func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
+        
+    }
+    func centralManagerDidUpdateState(_ central: CBCentralManager) {
+        let uuid = CBUUID.init(string: CharacterisTicDefine.ffe1)
+        if (central.retrieveConnectedPeripherals(withServices: [uuid])).count == 0 {
+            
+            let alertVC = UIAlertController(title: "Warning", message: "Disconnected", preferredStyle: UIAlertControllerStyle.alert)
+            self.show(alertVC, sender: nil)
+        }
+    }
+    func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
+        
+    }
+    func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
+        
+    }
+    
+}
 
 extension DisplayViewController : CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
-        NSLog("DID WRITE")
+        
         if (error != nil){
-            NSLog("\(error?.localizedDescription)")
+            let alertVC = UIAlertController(title: "Warning", message: "\(error?.localizedDescription)", preferredStyle: UIAlertControllerStyle.alert)
+            self.show(alertVC, sender: nil)
         } else {
-            
+            self.connectingPeripheral?.readValue(for: self.characterictist!)
         }
     }
     
@@ -135,6 +194,7 @@ extension DisplayViewController : CBPeripheralDelegate {
                 NSLog("Notify Cener")
                 self.characterictist = characteristic
                 self.connectingPeripheral?.setNotifyValue(true, for: characteristic)
+                break
             }
         }
     }
@@ -145,16 +205,40 @@ extension DisplayViewController : CBPeripheralDelegate {
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         NSLog("Receive")
-        if (characteristic.value != nil) {
-            let json = JSON.init(data: characteristic.value!)
-            NSLog("\(json)")
-            let a = String(data: characteristic.value!, encoding: String.Encoding.utf8)
-            let arr = Array(a!.utf8)
-            for item in arr {
-                let a = String(data: item.data, encoding: String.Encoding.utf8)
+        if (characterictist?.value != nil) {
+            let a = String(data: characteristic.value!, encoding: String.Encoding.ascii)
+            
+            self.result = self.result + (a ?? "")
+            NSLog("Result1:   \(self.result)")
+            if (self.result.contains("\n")) {
+                NSLog("Result: \(self.result)")
+                self.result = self.result.replacingOccurrences(of: "\n", with: "")
+                let arr = self.result.components(separatedBy: " ")
+                
+                var arrValue : [CGFloat] = []
+                for item in arr {
+                    arrValue.append(CGFloat(Int(item) ?? 0) / CGFloat(65535) )
+                }
+                self.result = ""
+                self.displayValue(arr: arrValue)
+            } else {
+                
             }
         } else {
-            NSLog("NIl ha ha ")
+            NSLog("NIl Value")
         }
+        
+    }
+    
+}
+
+
+public extension Int {
+    static func random(from: Int, to: Int) -> Int {
+        guard to > from else {
+            assertionFailure("Can not generate negative random numbers")
+            return 0
+        }
+        return Int(arc4random_uniform(UInt32(to - from)) + UInt32(from))
     }
 }

@@ -59,7 +59,7 @@ class TestingViewController: UIViewController {
     }
 }
 
-extension TestingViewController : CBPeripheralDelegate {
+extension TestingViewController : CBPeripheralDelegate {    
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
         NSLog("DID WRITE")
         if (error != nil){
