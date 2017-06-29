@@ -36,6 +36,9 @@ class DisplayViewController: UIViewController {
     var characterictist : CBCharacteristic?
     var service : CBService?
     
+    var ArrayMain : [Int] = []
+    var ArrayResult : [CGFloat] = []
+    var currentIndex = 0
     override var shouldAutorotate: Bool {
         return true
     }
@@ -62,6 +65,8 @@ class DisplayViewController: UIViewController {
         
         self.navigationItem.title = "HM-10"
         //set up BLE
+        
+        self.centralManager?.delegate = self
         self.connectingPeripheral?.delegate = self
         self.connectingPeripheral?.discoverServices(nil)
     }
@@ -111,18 +116,27 @@ class DisplayViewController: UIViewController {
     }
     
     func sendData(arr : [Int]) {
+        self.ArrayResult.removeAll()
         self.result = ""
-        if ((self.connectingPeripheral != nil) && (self.characterictist != nil)) {
-            var str = ""
-            for i in 0 ..< arr.count - 1 {
-                str = str + "\(arr[i])" + " "
-            }
-            str = str + "\(arr[arr.count - 1])" + "\n"
-            NSLog("Send:   \(str)    \(self.characterictist?.uuid.uuidString)")
-            let data = str.data(using: String.Encoding.ascii)
-            
-            self.connectingPeripheral?.writeValue(data!, for: self.characterictist!, type: CBCharacteristicWriteType.withoutResponse)            
+        self.ArrayMain = arr
+        for i in arr {
+            NSLog("Send: \(i)")
         }
+        if ((self.connectingPeripheral != nil) && (self.characterictist != nil)) {
+            self.currentIndex = 0
+            self.sendAtIndex(index: 0)
+        }
+    }
+    
+    func sendAtIndex(index: Int) {
+        if index > 5 {
+            self.displayValue(arr: self.ArrayResult)
+            NSLog("------------------------------------------------------------------------")
+            return
+        }
+        var score = ArrayMain[index]
+        let data2 = NSData(bytes: &score, length: 8)
+        self.connectingPeripheral?.writeValue(data2 as Data, for: self.characterictist!, type: CBCharacteristicWriteType.withoutResponse)
     }
     
     func displayValue(arr : [CGFloat]){
@@ -137,9 +151,13 @@ class DisplayViewController: UIViewController {
 
 extension DisplayViewController : CBCentralManagerDelegate {
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
-        let alertVC = UIAlertController(title: "Warning", message: "\(error?.localizedDescription)", preferredStyle: UIAlertControllerStyle.alert)
-        self.show(alertVC, sender: nil)
+        let alertVC = UIAlertController(title: "Warning", message: "\(error!.localizedDescription)", preferredStyle: UIAlertControllerStyle.alert)
         
+        let alertAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            self.dismiss(animated: true, completion: nil)
+        }
+        alertVC.addAction(alertAction)
+        self.show(alertVC, sender: nil)
     }
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         
@@ -168,7 +186,7 @@ extension DisplayViewController : CBPeripheralDelegate {
             let alertVC = UIAlertController(title: "Warning", message: "\(error?.localizedDescription)", preferredStyle: UIAlertControllerStyle.alert)
             self.show(alertVC, sender: nil)
         } else {
-            self.connectingPeripheral?.readValue(for: self.characterictist!)
+            
         }
     }
     
@@ -206,24 +224,29 @@ extension DisplayViewController : CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         NSLog("Receive")
         if (characterictist?.value != nil) {
-            let a = String(data: characteristic.value!, encoding: String.Encoding.ascii)
-            
-            self.result = self.result + (a ?? "")
-            NSLog("Result1:   \(self.result)")
-            if (self.result.contains("\n")) {
-                NSLog("Result: \(self.result)")
-                self.result = self.result.replacingOccurrences(of: "\n", with: "")
-                let arr = self.result.components(separatedBy: " ")
-                
-                var arrValue : [CGFloat] = []
-                for item in arr {
-                    arrValue.append(CGFloat(Int(item) ?? 0) / CGFloat(65535) )
-                }
-                self.result = ""
-                self.displayValue(arr: arrValue)
-            } else {
-                
-            }
+            let data = characterictist?.value as? NSData
+            var num = 0
+            data?.getBytes(&num, length: 8)
+            NSLog("Num: \(num)")
+            self.ArrayResult.append(CGFloat(num) / CGFloat(65535))
+            self.currentIndex = self.currentIndex + 1
+            self.sendAtIndex(index: self.currentIndex)
+//------------------------------------------------------------------------------------------------
+//            self.result = self.result + (a ?? "")
+//            if (self.result.contains("\n")) {
+//                NSLog("Result: \(self.result)")
+//                self.result = self.result.replacingOccurrences(of: "\n", with: "")
+//                let arr = self.result.components(separatedBy: " ")
+//                
+//                var arrValue : [CGFloat] = []
+//                for item in arr {
+//                    arrValue.append(CGFloat(Int(item) ?? 0) / CGFloat(65535) )
+//                }
+//                self.result = ""
+//                self.displayValue(arr: arrValue)
+//                } else {
+//            }
+//------------------------------------------------------------------------------------------------
         } else {
             NSLog("NIl Value")
         }
