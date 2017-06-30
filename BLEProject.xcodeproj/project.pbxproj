@@ -25,6 +25,8 @@
 		3687660F1EFC9FA6004082DB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3687660E1EFC9FA6004082DB /* BaseViewController.swift */; };
 		368766131EFCA470004082DB /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368766111EFCA470004082DB /* DeviceTableViewCell.swift */; };
 		368766141EFCA470004082DB /* DeviceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368766121EFCA470004082DB /* DeviceTableViewCell.xib */; };
+		36F70DFC1F05F01B006429A2 /* ControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F70DFA1F05F01A006429A2 /* ControllerViewController.swift */; };
+		36F70DFD1F05F01B006429A2 /* ControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F70DFB1F05F01A006429A2 /* ControllerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		3687660E1EFC9FA6004082DB /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		368766111EFCA470004082DB /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceTableViewCell.swift; path = Controller/ScanningViewController/CellDevice/DeviceTableViewCell.swift; sourceTree = "<group>"; };
 		368766121EFCA470004082DB /* DeviceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DeviceTableViewCell.xib; path = Controller/ScanningViewController/CellDevice/DeviceTableViewCell.xib; sourceTree = "<group>"; };
+		36F70DFA1F05F01A006429A2 /* ControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerViewController.swift; sourceTree = "<group>"; };
+		36F70DFB1F05F01A006429A2 /* ControllerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ControllerViewController.xib; sourceTree = "<group>"; };
 		7EAC291DF4C738EF5F3B82C1 /* Pods_BLEProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLEProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA42912CB5FE2CB9D8D061B8 /* Pods-BLEProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLEProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLEProject/Pods-BLEProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +141,7 @@
 		368766071EFC9EEC004082DB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				36F70DF91F05F006006429A2 /* ControllerVC */,
 				363A04231F0357F500788FE9 /* DisplayVC */,
 				3687660D1EFC9F1D004082DB /* ScanningVC */,
 				3687660E1EFC9FA6004082DB /* BaseViewController.swift */,
@@ -169,6 +174,15 @@
 				368766121EFCA470004082DB /* DeviceTableViewCell.xib */,
 			);
 			name = CellDevice;
+			sourceTree = "<group>";
+		};
+		36F70DF91F05F006006429A2 /* ControllerVC */ = {
+			isa = PBXGroup;
+			children = (
+				36F70DFA1F05F01A006429A2 /* ControllerViewController.swift */,
+				36F70DFB1F05F01A006429A2 /* ControllerViewController.xib */,
+			);
+			name = ControllerVC;
 			sourceTree = "<group>";
 		};
 		515AFCFE270B9965A8544320 /* Pods */ = {
@@ -243,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36F70DFD1F05F01B006429A2 /* ControllerViewController.xib in Resources */,
 				368766001EFC9E77004082DB /* LaunchScreen.storyboard in Resources */,
 				3640D19A1F023667001415F0 /* TestingViewController.xib in Resources */,
 				363A04271F03580700788FE9 /* DisplayViewController.xib in Resources */,
@@ -316,6 +331,7 @@
 				3687660B1EFC9F18004082DB /* ScanningViewController.swift in Sources */,
 				363A042E1F037ADC00788FE9 /* UIView+IBInspectable.swift in Sources */,
 				363A04261F03580700788FE9 /* DisplayViewController.swift in Sources */,
+				36F70DFC1F05F01B006429A2 /* ControllerViewController.swift in Sources */,
 				363A042F1F037ADC00788FE9 /* UIView+IRAnimation.swift in Sources */,
 				368765F61EFC9E77004082DB /* AppDelegate.swift in Sources */,
 			);

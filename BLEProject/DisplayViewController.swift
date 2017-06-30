@@ -12,6 +12,10 @@ import SwiftyJSON
 
 class DisplayViewController: UIViewController {
     
+    @IBOutlet weak var lblTemp: UILabel!
+    @IBOutlet weak var lblResultTemp : UILabel!
+    @IBOutlet weak var tempDecimal : UILabel!
+    
     @IBOutlet weak var viewXg: UIView!
     @IBOutlet weak var viewValueXg: UIView!
     
@@ -36,7 +40,6 @@ class DisplayViewController: UIViewController {
     var characterictist : CBCharacteristic?
     var service : CBService?
     
-    var ArrayMain : [Int] = []
     var ArrayResult : [CGFloat] = []
     var currentIndex = 0
     override var shouldAutorotate: Bool {
@@ -95,7 +98,7 @@ class DisplayViewController: UIViewController {
         let y = viewChild.frame.origin.y
         let height = viewChild.frame.height
         let width = viewParent.frame.width * value
-        UIView.animate(withDuration: 0.3, animations: { () -> Void in
+        UIView.animate(withDuration: 1/30, animations: { () -> Void in
             viewChild.frame = CGRect(x: x, y: y, width: width, height: height)
         })
     }
@@ -106,46 +109,22 @@ class DisplayViewController: UIViewController {
             let rand = Int.random(from: 100, to: 65535)            
             a.append(Int(rand))
         }
-        self.sendData(arr: a)
+     //   self.sendData(arr: a)
     }
     
     @IBAction func closeTouchUp(_ sender : UIButton){
         self.dismiss(animated: true) { 
-            
+            self.centralManager?.cancelPeripheralConnection(self.connectingPeripheral!)
         }
-    }
-    
-    func sendData(arr : [Int]) {
-        self.ArrayResult.removeAll()
-        self.result = ""
-        self.ArrayMain = arr
-        for i in arr {
-            NSLog("Send: \(i)")
-        }
-        if ((self.connectingPeripheral != nil) && (self.characterictist != nil)) {
-            self.currentIndex = 0
-            self.sendAtIndex(index: 0)
-        }
-    }
-    
-    func sendAtIndex(index: Int) {
-        if index > 5 {
-            self.displayValue(arr: self.ArrayResult)
-            NSLog("------------------------------------------------------------------------")
-            return
-        }
-        var score = ArrayMain[index]
-        let data2 = NSData(bytes: &score, length: 8)
-        self.connectingPeripheral?.writeValue(data2 as Data, for: self.characterictist!, type: CBCharacteristicWriteType.withoutResponse)
     }
     
     func displayValue(arr : [CGFloat]){
-        self.update(value: CGFloat(arr[0]), viewChild: viewValueXg, viewParent: viewXg)
-        self.update(value: CGFloat(arr[1]), viewChild: viewValueYg, viewParent: viewYg)
-        self.update(value: CGFloat(arr[2]), viewChild: viewValueZg, viewParent: viewZg)
-        self.update(value: CGFloat(arr[3]), viewChild: viewValueXa, viewParent: viewXa)
-        self.update(value: CGFloat(arr[4]), viewChild: viewValueYa, viewParent: viewYa)
-        self.update(value: CGFloat(arr[5]), viewChild: viewValueZa, viewParent: viewZa)
+        self.update(value: CGFloat(arr[0]), viewChild: viewValueXa, viewParent: viewXa)
+        self.update(value: CGFloat(arr[1]), viewChild: viewValueYa, viewParent: viewYa)
+        self.update(value: CGFloat(arr[2]), viewChild: viewValueZa, viewParent: viewZa)
+        self.update(value: CGFloat(arr[3]), viewChild: viewValueXg, viewParent: viewXg)
+        self.update(value: CGFloat(arr[4]), viewChild: viewValueYg, viewParent: viewYg)
+        self.update(value: CGFloat(arr[5]), viewChild: viewValueZg, viewParent: viewZg)
     }
 }
 
@@ -222,39 +201,49 @@ extension DisplayViewController : CBPeripheralDelegate {
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        NSLog("Receive")
-        if (characterictist?.value != nil) {
-            let data = characterictist?.value as? NSData
-            var num = 0
-            data?.getBytes(&num, length: 8)
-            NSLog("Num: \(num)")
-            self.ArrayResult.append(CGFloat(num) / CGFloat(65535))
-            self.currentIndex = self.currentIndex + 1
-            self.sendAtIndex(index: self.currentIndex)
-//------------------------------------------------------------------------------------------------
-//            self.result = self.result + (a ?? "")
-//            if (self.result.contains("\n")) {
-//                NSLog("Result: \(self.result)")
-//                self.result = self.result.replacingOccurrences(of: "\n", with: "")
-//                let arr = self.result.components(separatedBy: " ")
-//                
-//                var arrValue : [CGFloat] = []
-//                for item in arr {
-//                    arrValue.append(CGFloat(Int(item) ?? 0) / CGFloat(65535) )
-//                }
-//                self.result = ""
-//                self.displayValue(arr: arrValue)
-//                } else {
-//            }
-//------------------------------------------------------------------------------------------------
-        } else {
-            NSLog("NIl Value")
-        }
+        let a = String.init(data: characteristic.value!, encoding: String.Encoding.utf8)
         
+        if (a?.contains("@"))! {
+            self.result = (a?.replacingOccurrences(of: "@", with: "")) ?? ""
+        } else {            
+            self.result = self.result + a!
+            if ( self.result.characters.count != 32) {
+                return
+            }
+            NSLog("Result1: \(result)")
+            let str = self.result
+            self.ArrayResult.removeAll()
+            var tmpResult = ""
+            var tmp = ""
+            for i in 0 ..< str.characters.count {
+                let c1 = str[i]
+                tmp.append(c1)
+                if ( i % 4 == 3) {
+                    tmpResult = tmpResult + " " + tmp
+                    let a = UInt16.init(tmp, radix: 16)
+                    let cg : CGFloat = CGFloat(a!) / CGFloat(65535)
+                    
+                    if ( i == 27) {
+                        let x = Int16(truncatingBitPattern: strtoul(tmp, nil, 16))
+                        let temp  =  Float(x) / Float(340) + 36.53
+                        self.ArrayResult.append(CGFloat(temp))
+                        self.lblResultTemp.text = tmp
+                        self.tempDecimal.text = "\(Int(x))"
+                        self.lblTemp.text = "\(temp)"
+                    } else {
+                        self.ArrayResult.append(cg)
+                    }
+                    tmp = ""
+                }
+            }
+            NSLog("Result2 : \(tmpResult)")
+            if (self.ArrayResult.count == 8) {
+                self.displayValue(arr: self.ArrayResult)
+            }
+        }
     }
     
 }
-
 
 public extension Int {
     static func random(from: Int, to: Int) -> Int {
