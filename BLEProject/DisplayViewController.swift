@@ -12,6 +12,8 @@ import SwiftyJSON
 
 class DisplayViewController: UIViewController {
     
+    let epsion = CGFloat(0.05)
+    
     @IBOutlet weak var lblTemp: UILabel!
     @IBOutlet weak var lblResultTemp : UILabel!
     @IBOutlet weak var tempDecimal : UILabel!
@@ -33,6 +35,28 @@ class DisplayViewController: UIViewController {
     
     @IBOutlet weak var viewZa: UIView!
     @IBOutlet weak var viewValueZa: UIView!
+    
+    
+    @IBOutlet weak var lblXg : UILabel!
+    @IBOutlet weak var lblYg : UILabel!
+    @IBOutlet weak var lblZg : UILabel!
+    
+    @IBOutlet weak var lblXa : UILabel!
+    @IBOutlet weak var lblYa : UILabel!
+    @IBOutlet weak var lblZa : UILabel!
+    
+    @IBOutlet weak var btn0 : UIButton!
+    @IBOutlet weak var btn1 : UIButton!
+    @IBOutlet weak var btn2 : UIButton!
+    @IBOutlet weak var btn3 : UIButton!
+    @IBOutlet weak var btn4 : UIButton!
+    @IBOutlet weak var btn5 : UIButton!
+    @IBOutlet weak var btn6 : UIButton!
+    @IBOutlet weak var btn7 : UIButton!
+    @IBOutlet weak var btnTT : UIButton!
+    
+    var arrBtn = [UIButton]()
+    var previousBtn : UIButton?
 
     var result = ""
     var centralManager : CBCentralManager?
@@ -73,6 +97,17 @@ class DisplayViewController: UIViewController {
         self.connectingPeripheral?.delegate = self
         self.connectingPeripheral?.discoverServices(nil)
     }
+    
+    func initToArray() {
+        arrBtn.append(btn0)
+        arrBtn.append(btn1)
+        arrBtn.append(btn2)
+        arrBtn.append(btn3)
+        arrBtn.append(btn4)
+        arrBtn.append(btn5)
+        arrBtn.append(btn6)
+        arrBtn.append(btn7)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -108,8 +143,7 @@ class DisplayViewController: UIViewController {
         for _ in 0 ..< 6 {
             let rand = Int.random(from: 100, to: 65535)            
             a.append(Int(rand))
-        }
-     //   self.sendData(arr: a)
+        }     
     }
     
     @IBAction func closeTouchUp(_ sender : UIButton){
@@ -118,13 +152,88 @@ class DisplayViewController: UIViewController {
         }
     }
     
+    func clearAll(){
+        
+    }
+    
     func displayValue(arr : [CGFloat]){
+        let xA = arr[0]
+        let yA = arr[1]
+        
+        if ((xA <= 0.25 + epsion) && (xA >= 0.0 + epsion)) { //DOWN
+            if (( yA >= 0.75 + epsion) && (yA <= 1 - epsion)){ //left
+                if (self.previousBtn != btn5){
+                    self.previousBtn?.backgroundColor = UIColor.white
+                    btn5.backgroundColor = UIColor.red
+                    self.previousBtn = btn5
+                }
+            } else if ( (yA >= 0 + epsion ) && (yA <= 0.25 - epsion)) { //right
+                if (self.previousBtn != btn3){
+                    self.previousBtn?.backgroundColor = UIColor.white
+                    btn3.backgroundColor = UIColor.red
+                    self.previousBtn = btn3
+                }
+            } else {
+                if (self.previousBtn != btn4) {
+                    self.previousBtn?.backgroundColor = UIColor.white
+                    btn4.backgroundColor = UIColor.red
+                    self.previousBtn = btn4
+                }
+            }
+        } else if ((xA >= 0.75 + epsion) && (xA <= 1 - epsion)) {//back //UP
+            if (( yA >= 0.75 + epsion) && (yA <= 1 - epsion)){ //left
+                if (self.previousBtn != btn7) {
+                    self.previousBtn?.backgroundColor = UIColor.white
+                    btn7.backgroundColor = UIColor.red
+                    self.previousBtn = btn7
+                }
+            } else if ( (yA >= 0 + epsion ) && (yA <= 0.25 - epsion)) { //right
+                if (self.previousBtn != btn1) {
+                    self.previousBtn?.backgroundColor = UIColor.white
+                    btn1.backgroundColor = UIColor.red
+                    self.previousBtn = btn1
+                }
+            } else {
+                if (self.previousBtn != btn0) {
+                    self.previousBtn?.backgroundColor = UIColor.white
+                    btn0.backgroundColor = UIColor.red
+                    self.previousBtn = btn0
+                }
+            }
+        } else {
+            if (( yA >= 0.75 + epsion) && (yA <= 1 - epsion)){ //left
+                if (self.previousBtn != btn6) {
+                    self.previousBtn?.backgroundColor = UIColor.white
+                    btn6.backgroundColor = UIColor.red
+                    self.previousBtn = btn6
+                }
+            } else if ( (yA >= 0 + epsion ) && (yA <= 0.25 - epsion)) { //right
+                if (self.previousBtn != btn2) {
+                    self.previousBtn?.backgroundColor = UIColor.white
+                    btn2.backgroundColor = UIColor.red
+                    self.previousBtn = btn2
+                }
+            } else {
+                if (self.previousBtn != btnTT) {
+                    self.previousBtn?.backgroundColor = UIColor.white
+                    btnTT.backgroundColor = UIColor.red
+                    self.previousBtn = btnTT
+                }
+            }
+        }
+        
         self.update(value: CGFloat(arr[0]), viewChild: viewValueXa, viewParent: viewXa)
+        lblXa.text = "\(arr[0] * 65535)"
         self.update(value: CGFloat(arr[1]), viewChild: viewValueYa, viewParent: viewYa)
+        lblYa.text = "\(arr[1] * 65535)"
         self.update(value: CGFloat(arr[2]), viewChild: viewValueZa, viewParent: viewZa)
+        lblZa.text = "\(arr[2] * 65535)"
         self.update(value: CGFloat(arr[3]), viewChild: viewValueXg, viewParent: viewXg)
+        lblXg.text = "\(arr[3] * 65535)"
         self.update(value: CGFloat(arr[4]), viewChild: viewValueYg, viewParent: viewYg)
+        lblYg.text = "\(arr[4] * 65535)"
         self.update(value: CGFloat(arr[5]), viewChild: viewValueZg, viewParent: viewZg)
+        lblZg.text = "\(arr[5] * 65535)"
     }
 }
 
@@ -134,6 +243,7 @@ extension DisplayViewController : CBCentralManagerDelegate {
         
         let alertAction = UIAlertAction(title: "OK", style: .default) { (action) in
             self.dismiss(animated: true, completion: nil)
+            self.centralManager?.cancelPeripheralConnection(self.connectingPeripheral!)
         }
         alertVC.addAction(alertAction)
         self.show(alertVC, sender: nil)
@@ -160,14 +270,7 @@ extension DisplayViewController : CBCentralManagerDelegate {
 
 extension DisplayViewController : CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {
-        
-        if (error != nil){
-            let alertVC = UIAlertController(title: "Warning", message: "\(error?.localizedDescription)", preferredStyle: UIAlertControllerStyle.alert)
-            self.show(alertVC, sender: nil)
-        } else {
-            
-        }
-    }
+           }
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
         for service in peripheral.services! {
@@ -210,7 +313,6 @@ extension DisplayViewController : CBPeripheralDelegate {
             if ( self.result.characters.count != 32) {
                 return
             }
-            NSLog("Result1: \(result)")
             let str = self.result
             self.ArrayResult.removeAll()
             var tmpResult = ""
@@ -236,7 +338,6 @@ extension DisplayViewController : CBPeripheralDelegate {
                     tmp = ""
                 }
             }
-            NSLog("Result2 : \(tmpResult)")
             if (self.ArrayResult.count == 8) {
                 self.displayValue(arr: self.ArrayResult)
             }

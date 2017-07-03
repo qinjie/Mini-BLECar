@@ -9,7 +9,11 @@
 import UIKit
 
 class ControllerViewController: UIViewController {
-
+    @IBOutlet weak var btnUp : UIButton!
+    @IBOutlet weak var btnDown : UIButton!
+    @IBOutlet weak var btnLeft : UIButton!
+    @IBOutlet weak var btnRight : UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
