@@ -4,12 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>CarbonKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-BLEProject.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>STPopup.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>2A1E6D86E02B8061DC1E9040815B91C3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>320BA4DF96781A6DE3D2C58117B095C9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>352F3CCD20CDBC5C9822654BDACCE6D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>41FA54D12162DAD51D02FC58A2CD5034</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6CC2F34FE59D27F1D515DFA579092D08</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>ACBC9E074512160855074B4920DF9BA3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CC0129C2E5C71909A6F6BE8BDF3817A3</key>
+		<key>BF19B936A9C8CBBEA90EFED82CC439F8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -7,80 +7,181 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0968524ED4DE8DF7834055C5B6089D72 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7E29BC3A027A35CE5470417EEA6C53 /* MBProgressHUD-dummy.m */; };
-		0AF20CBF7ECDA3027CC156DCD9D91A0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D40E632FA2A47E7DBA77D3D46FDFE8 /* Foundation.framework */; };
-		1215629D558162CE728B27386DA02D1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D40E632FA2A47E7DBA77D3D46FDFE8 /* Foundation.framework */; };
-		1E6AB5BDF19D35F5E73501D5737E5D6C /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586563663B390D156DDF7DF0683F25C9 /* SwiftyJSON.swift */; };
-		258A6C7612FDCD404566FC796B94D735 /* Pods-BLEProject-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A6108D00E339C0187873B17C80052571 /* Pods-BLEProject-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		28A794912ED1E06B05D96DF5ED0AED19 /* MBProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 86984BBDEA52397759B40C23D55014F7 /* MBProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		435726B5386DFFBE10E7246F2B73A6E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D40E632FA2A47E7DBA77D3D46FDFE8 /* Foundation.framework */; };
-		5E890F0FB0D587EAE592A3B935F93373 /* Pods-BLEProject-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D9038585BF4E9EAF29E495398FB0E /* Pods-BLEProject-dummy.m */; };
-		82E0AFAFA2FBD156AF51837BDB8FD3A2 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F388D866AF4707C3EEC14A6F1E066B40 /* SwiftyJSON-dummy.m */; };
-		897C38C8E3C31950E2E93A4D6937CCC4 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2D9604662A23DCBE98FBA4EE7F2C4A /* MBProgressHUD.m */; };
-		98DF470CA8F6DD132AFAC1398FCD579C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5B476C7C3BDD4218E3B0B852CE57093 /* CoreGraphics.framework */; };
-		A5BF8DBDD8660DBCFE712657F3D82BDA /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = FCF2E8E2EE43B145A5FBD2EBAA7BC139 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DA3FBCF3B21EB18151C3BC2645107E0D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E054739AD8EE5381E7FBABB3ACA80805 /* QuartzCore.framework */; };
-		F1583FE36BC49D3E3069AEA0779F800D /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F01834725672710C60E0706827B6371A /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01648676E6908515082EC369BDCB4447 /* STPopupControllerTransitioningFade.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C71DD7BDF88B81E9B392D1B3F0FC6A3 /* STPopupControllerTransitioningFade.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		045F3C1888DDE2D28D0266DC81E37196 /* CarbonSwipeRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA933075B263AB6673365B024902E91 /* CarbonSwipeRefresh.m */; };
+		0968524ED4DE8DF7834055C5B6089D72 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A7C451CF8EF166B40ACB2FF0292A62C /* MBProgressHUD-dummy.m */; };
+		0EF83262CD766C3C0B8B3727481F5DF8 /* CarbonKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AFD8D0B6F0707E2E02A93A4C586E1D9 /* CarbonKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1144EF94D3742E379E0DA7B95388D64B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
+		1215629D558162CE728B27386DA02D1D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
+		12D261C7D68A65B8F6BB66361DB80C98 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E18E616B90ADE5397BFEBC7609264EA /* SwiftyJSON.swift */; };
+		1B0D4DCF1788FCECCBB333F3A1A49394 /* CarbonTabSwipeNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = D495B1315D42E13B487D6E53DBBF0924 /* CarbonTabSwipeNavigation.m */; };
+		1EADF9806A88919744E66993C412505E /* CarbonTabSwipeSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = F20C8BF029BA5A11D38B0FF0AD0B1D5A /* CarbonTabSwipeSegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		242E4044CF56BD8E105E17C2FE9C5DCC /* UIResponder+STPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2D81A9D9FB7D43864049DA3C8B0F4D /* UIResponder+STPopup.m */; };
+		2573D8EA4BE6099F42F5058F65302D9C /* STPopupLeftBarItem.h in Headers */ = {isa = PBXBuildFile; fileRef = E321E274A579A3BC3D0AAB6E981A92B1 /* STPopupLeftBarItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		288E2224CC3ADD3427C026A31E7CBB3E /* STPopup.h in Headers */ = {isa = PBXBuildFile; fileRef = BF856629144F722BA4796EC5887F2FE7 /* STPopup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		28A794912ED1E06B05D96DF5ED0AED19 /* MBProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8ED29FA11888CC5D0FE8065E99A27463 /* MBProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D921B2F8730FC8CC4104B70DB65DB2E /* UIViewController+STPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C2F7EAD52500540B503A40B886416A /* UIViewController+STPopup.m */; };
+		39655F0B9A920BA0255CD8F36E2A946B /* STPopup-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7981D3FE86ECE06A9C090D11FEA4B24A /* STPopup-dummy.m */; };
+		3F195EC064C94612A280DC98C22FC823 /* STPopupController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B9753B1B1C6547F8E9A72C21EE4954D /* STPopupController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		530743BDB2EB7431110671D05BCF44E8 /* STPopupControllerTransitioningSlideVertical.h in Headers */ = {isa = PBXBuildFile; fileRef = 262D11F6F3D46F21FF47706BBD3AB076 /* STPopupControllerTransitioningSlideVertical.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		551C83DF264136D169945766E7AC8C2A /* STPopupLeftBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EDAFC412C547FE209C6CDC593637EB67 /* STPopupLeftBarItem.m */; };
+		5CFE136A1CE6F600769EFA298F74137E /* CarbonKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B48D4C299DD72A3A7237A955BD91AF /* CarbonKit-dummy.m */; };
+		64955BEA22805328D5805CB9F4E801F5 /* CarbonTabSwipeNavigation.h in Headers */ = {isa = PBXBuildFile; fileRef = F43605F9793DA65FE330E519A33B93B3 /* CarbonTabSwipeNavigation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67F316C2B932E0EE69096CDE6DABF609 /* Pods-BLEProject-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A6108D00E339C0187873B17C80052571 /* Pods-BLEProject-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E67D71EAB5BE8D270E34D7293C34158 /* STPopup-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F916C039C09555A57843B2237A05016A /* STPopup-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73888206F7A19C1D69BB059A324BBE98 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B721FF1A6D837DA386570A8D652E2A /* SwiftyJSON-dummy.m */; };
+		741A3EFB462E0E53D06C0EA1B2929BF6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1FD743D031D373EDF29CC526F758E2 /* UIKit.framework */; };
+		77F1CDCFE4AF46E2DE0A46C26DF9325B /* STPopupNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F51991E16E5033CE02A143658C062E42 /* STPopupNavigationBar.m */; };
+		7CC92302D846127459CD210C0708F85C /* UIResponder+STPopup.h in Headers */ = {isa = PBXBuildFile; fileRef = A207AE5900CDBF1A71AC918E85858D0B /* UIResponder+STPopup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83B9719A1491B9090197E765D18F43A9 /* STPopupControllerTransitioningSlideVertical.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F6D4CB83A45F92957219EF22B68A86 /* STPopupControllerTransitioningSlideVertical.m */; };
+		897C38C8E3C31950E2E93A4D6937CCC4 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 22877F1DEC328D28A0DCA348AA163202 /* MBProgressHUD.m */; };
+		961E183A8C45F4E5AAD028F80B8B4089 /* STPopupNavigationBar.h in Headers */ = {isa = PBXBuildFile; fileRef = DD8E96AEAB18D6BA6CB961C09DCA9E2E /* STPopupNavigationBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		98DF470CA8F6DD132AFAC1398FCD579C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8EF2301073B01E30612B5B1BD94446 /* CoreGraphics.framework */; };
+		99FBDAD19C67129DCCF4B819CF852C8E /* CarbonKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E880B7B0B0D02EBF165D901F9D468FB3 /* CarbonKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5BF8DBDD8660DBCFE712657F3D82BDA /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DEAAE5DD38D0A862671E469F504C087 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B324B5ADE7BC072BF9827418BDA5D58D /* CarbonTabSwipeScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 88FBD1CC5FB1EFEF9273E7830F2334F2 /* CarbonTabSwipeScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C035141BE361CC778F7A8A12AC141E56 /* CarbonSwipeRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = C52A3E1E5B1B6936FDC46FB7F4CA1B63 /* CarbonSwipeRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C58ADC57962868077B8C38AF5E67A82F /* CarbonTabSwipeSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF705ACF6228FD38713B07E63F8AED6 /* CarbonTabSwipeSegmentedControl.m */; };
+		C601A77860CE0C9C0E45D56DA68EE35E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
+		CD16CBB4A471BA019D5664635E818B09 /* STPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = C238CE76CBC3935D79A88839AE292266 /* STPopupController.m */; };
+		D31655A7CF5B7656B13F1667C53D00AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
+		D3248F1D41642F2F845A734B5D6F4961 /* Pods-BLEProject-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D9038585BF4E9EAF29E495398FB0E /* Pods-BLEProject-dummy.m */; };
+		DA3FBCF3B21EB18151C3BC2645107E0D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51498E299B7CB17BCC8B54F93C150FAA /* QuartzCore.framework */; };
+		DA8CE2125946FBAD87EB5576CD0C1FDA /* CarbonTabSwipeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0AE49784CC606D0541A31FB76295C7 /* CarbonTabSwipeScrollView.m */; };
+		DE23F9379DDD1A98A581A2C809499D47 /* STPopupControllerTransitioningFade.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F338A79739BBF77CED8FB409A547C44 /* STPopupControllerTransitioningFade.m */; };
+		E65BB00BC6F10D87D318E6696E16E729 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CCCAF800EE4272B307B4BBEB2AFE4D3C /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC9294EC7E167884A8BA3EC20D5F5DAD /* UIViewController+STPopup.h in Headers */ = {isa = PBXBuildFile; fileRef = A09AFAD7A1E794E2D86694C02A87F35D /* UIViewController+STPopup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF1020AECC59A0638979AA858F0D1BC6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B4379F8FC949D5B3C49F03743D0A5B8F /* PBXContainerItemProxy */ = {
+		252C50C08931DAB59C26904AC0FE18E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 320BA4DF96781A6DE3D2C58117B095C9;
+			remoteInfo = STPopup;
+		};
+		54C23A235D6FEDFDB09362DD20E5EC0E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 352F3CCD20CDBC5C9822654BDACCE6D0;
+			remoteInfo = CarbonKit;
+		};
+		8A57FD592D1C2770B6CDC193CE8494B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF19B936A9C8CBBEA90EFED82CC439F8;
+			remoteInfo = SwiftyJSON;
+		};
+		E06F38095D766EFFDAD56454FA91EE92 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 41FA54D12162DAD51D02FC58A2CD5034;
 			remoteInfo = MBProgressHUD;
 		};
-		FA80F86D261F9AB99A90E01B624D814C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CC0129C2E5C71909A6F6BE8BDF3817A3;
-			remoteInfo = SwiftyJSON;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		019A9AA9E24AAEE4FE75A09E1E232382 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		021160BE822EBA9AA27AE7716020B8A6 /* STPopup-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "STPopup-prefix.pch"; sourceTree = "<group>"; };
+		0D8EF2301073B01E30612B5B1BD94446 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		15338B5952986847335932A3FB48DC93 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		18CA32B6B2B5BC3A2C6D392E3BE8D75B /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19B6C58D1E7E331735BBA6C17E5C22CA /* Pods_BLEProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BLEProject.framework; path = "Pods-BLEProject.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AB8A731616C95DCD1A588D48CF83509 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B2D9604662A23DCBE98FBA4EE7F2C4A /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		1B468BAD2A40FED876D7B56271A05B1D /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
-		547D1EBBC61888ED2EC209BA5C1F66AA /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		586563663B390D156DDF7DF0683F25C9 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		1AFD8D0B6F0707E2E02A93A4C586E1D9 /* CarbonKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CarbonKit-umbrella.h"; sourceTree = "<group>"; };
+		2279930068FB55185BD27BBAA40E7424 /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
+		22877F1DEC328D28A0DCA348AA163202 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		262D11F6F3D46F21FF47706BBD3AB076 /* STPopupControllerTransitioningSlideVertical.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STPopupControllerTransitioningSlideVertical.h; path = STPopup/STPopupControllerTransitioningSlideVertical.h; sourceTree = "<group>"; };
+		2EB722BE7BFC0061D6552A8604520B6F /* CarbonKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CarbonKit.xcconfig; sourceTree = "<group>"; };
+		3B9753B1B1C6547F8E9A72C21EE4954D /* STPopupController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STPopupController.h; path = STPopup/STPopupController.h; sourceTree = "<group>"; };
+		3D2D81A9D9FB7D43864049DA3C8B0F4D /* UIResponder+STPopup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIResponder+STPopup.m"; path = "STPopup/UIResponder+STPopup.m"; sourceTree = "<group>"; };
+		4C71DD7BDF88B81E9B392D1B3F0FC6A3 /* STPopupControllerTransitioningFade.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STPopupControllerTransitioningFade.h; path = STPopup/STPopupControllerTransitioningFade.h; sourceTree = "<group>"; };
+		51498E299B7CB17BCC8B54F93C150FAA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		5B0AE49784CC606D0541A31FB76295C7 /* CarbonTabSwipeScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CarbonTabSwipeScrollView.m; path = CarbonKit/CarbonTabSwipeScrollView.m; sourceTree = "<group>"; };
+		5B661D8CEC4393586CF08C91D10C7AC4 /* CarbonKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CarbonKit-prefix.pch"; sourceTree = "<group>"; };
+		5F338A79739BBF77CED8FB409A547C44 /* STPopupControllerTransitioningFade.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STPopupControllerTransitioningFade.m; path = STPopup/STPopupControllerTransitioningFade.m; sourceTree = "<group>"; };
 		646B5E6BF90F1F59280145F9A3A7AB9B /* Pods-BLEProject.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-BLEProject.modulemap"; sourceTree = "<group>"; };
 		65079100C067250FA96E774FF2587091 /* Pods-BLEProject-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BLEProject-frameworks.sh"; sourceTree = "<group>"; };
-		7269BD888B482E5554CB16220B586C46 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6BF705ACF6228FD38713B07E63F8AED6 /* CarbonTabSwipeSegmentedControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CarbonTabSwipeSegmentedControl.m; path = CarbonKit/CarbonTabSwipeSegmentedControl.m; sourceTree = "<group>"; };
+		6F1E74163F2D26E701866E1CC9CE7F1C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		769BC947CE8B1DF1EFFC5D89FD0E94E7 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
+		7981D3FE86ECE06A9C090D11FEA4B24A /* STPopup-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "STPopup-dummy.m"; sourceTree = "<group>"; };
+		7C7E17543FFF283802B226AB90468F2A /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
 		7F9D9038585BF4E9EAF29E495398FB0E /* Pods-BLEProject-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BLEProject-dummy.m"; sourceTree = "<group>"; };
-		82D40E632FA2A47E7DBA77D3D46FDFE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		86984BBDEA52397759B40C23D55014F7 /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
+		82E30CBB6602D5B6A157A00BE5F307EB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B721FF1A6D837DA386570A8D652E2A /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		87D9F04B84052EADAC2F2CD375CF817F /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		884FA4F9D45848CD2DEF840BE6292F02 /* CarbonKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = CarbonKit.modulemap; sourceTree = "<group>"; };
+		88FBD1CC5FB1EFEF9273E7830F2334F2 /* CarbonTabSwipeScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CarbonTabSwipeScrollView.h; path = CarbonKit/CarbonTabSwipeScrollView.h; sourceTree = "<group>"; };
+		8AAFD3CD120E367F9BBBF47577F0690F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8ABA28F2E3D24A3B49000078C6E55644 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBProgressHUD.framework; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD7CAB736447927A9C667ADFCA87139 /* Pods-BLEProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLEProject.release.xcconfig"; sourceTree = "<group>"; };
 		8B81C1830DD3242517DFBF02AA221920 /* Pods-BLEProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLEProject.debug.xcconfig"; sourceTree = "<group>"; };
+		8DEAAE5DD38D0A862671E469F504C087 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		8EA933075B263AB6673365B024902E91 /* CarbonSwipeRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CarbonSwipeRefresh.m; path = CarbonKit/CarbonSwipeRefresh.m; sourceTree = "<group>"; };
+		8ED29FA11888CC5D0FE8065E99A27463 /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A4E13D87BC039D6BAE5C8A3755CFA817 /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
+		9A7C451CF8EF166B40ACB2FF0292A62C /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		9E18E616B90ADE5397BFEBC7609264EA /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		A09AFAD7A1E794E2D86694C02A87F35D /* UIViewController+STPopup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+STPopup.h"; path = "STPopup/UIViewController+STPopup.h"; sourceTree = "<group>"; };
+		A0F8CAD3C1199A0175D8E03E6BC9C168 /* STPopup.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = STPopup.xcconfig; sourceTree = "<group>"; };
+		A207AE5900CDBF1A71AC918E85858D0B /* UIResponder+STPopup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIResponder+STPopup.h"; path = "STPopup/UIResponder+STPopup.h"; sourceTree = "<group>"; };
+		A5581E22D20B4F34185EF41C67F69717 /* STPopup.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = STPopup.modulemap; sourceTree = "<group>"; };
 		A6108D00E339C0187873B17C80052571 /* Pods-BLEProject-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BLEProject-umbrella.h"; sourceTree = "<group>"; };
-		A9F55576088510C1ED7D67004F025FCB /* Pods_BLEProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BLEProject.framework; path = "Pods-BLEProject.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA7E29BC3A027A35CE5470417EEA6C53 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
-		B43F56F60B0CEE411B3A0C4B7FFAD43A /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
-		B9B36ED0EF6660757A02CEABE98F69BC /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
+		B9F6D4CB83A45F92957219EF22B68A86 /* STPopupControllerTransitioningSlideVertical.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STPopupControllerTransitioningSlideVertical.m; path = STPopup/STPopupControllerTransitioningSlideVertical.m; sourceTree = "<group>"; };
+		BF856629144F722BA4796EC5887F2FE7 /* STPopup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STPopup.h; path = STPopup/STPopup.h; sourceTree = "<group>"; };
 		BFF599E34DF79C6B310BFE056E30D118 /* Pods-BLEProject-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BLEProject-resources.sh"; sourceTree = "<group>"; };
+		C0318BF919F7B0E73C36249D3CF4224F /* STPopup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = STPopup.framework; path = STPopup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1B48D4C299DD72A3A7237A955BD91AF /* CarbonKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CarbonKit-dummy.m"; sourceTree = "<group>"; };
+		C238CE76CBC3935D79A88839AE292266 /* STPopupController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STPopupController.m; path = STPopup/STPopupController.m; sourceTree = "<group>"; };
 		C40FF46B7A7404324F2841D04D335EC1 /* Pods-BLEProject-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BLEProject-acknowledgements.plist"; sourceTree = "<group>"; };
-		E054739AD8EE5381E7FBABB3ACA80805 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		E26E097CE22C37806121BA7069F2E392 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E496A92D79C788DC9F9A9EA7D5D302E6 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBProgressHUD.framework; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5B476C7C3BDD4218E3B0B852CE57093 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		C52A3E1E5B1B6936FDC46FB7F4CA1B63 /* CarbonSwipeRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CarbonSwipeRefresh.h; path = CarbonKit/CarbonSwipeRefresh.h; sourceTree = "<group>"; };
+		C8A8F4DA1439F2E54ABBF1DA9F119174 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		CCCAF800EE4272B307B4BBEB2AFE4D3C /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		CCEBBB63237B1EF7119B101C20E10AA7 /* CarbonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CarbonKit.framework; path = CarbonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D495B1315D42E13B487D6E53DBBF0924 /* CarbonTabSwipeNavigation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CarbonTabSwipeNavigation.m; path = CarbonKit/CarbonTabSwipeNavigation.m; sourceTree = "<group>"; };
+		DD8E96AEAB18D6BA6CB961C09DCA9E2E /* STPopupNavigationBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STPopupNavigationBar.h; path = STPopup/STPopupNavigationBar.h; sourceTree = "<group>"; };
+		E321E274A579A3BC3D0AAB6E981A92B1 /* STPopupLeftBarItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STPopupLeftBarItem.h; path = STPopup/STPopupLeftBarItem.h; sourceTree = "<group>"; };
+		E880B7B0B0D02EBF165D901F9D468FB3 /* CarbonKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CarbonKit.h; path = CarbonKit/CarbonKit.h; sourceTree = "<group>"; };
 		E9CE47EB2407EFA219F9D438FD25E33D /* Pods-BLEProject-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BLEProject-acknowledgements.markdown"; sourceTree = "<group>"; };
-		ED50E31F398363EE7EF3066ECB0FC845 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
-		F01834725672710C60E0706827B6371A /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
-		F0BC530128D809A529B00FAF468CD071 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
-		F388D866AF4707C3EEC14A6F1E066B40 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
-		FCF2E8E2EE43B145A5FBD2EBAA7BC139 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		EC1FD743D031D373EDF29CC526F758E2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		EDAFC412C547FE209C6CDC593637EB67 /* STPopupLeftBarItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STPopupLeftBarItem.m; path = STPopup/STPopupLeftBarItem.m; sourceTree = "<group>"; };
+		F0C2F7EAD52500540B503A40B886416A /* UIViewController+STPopup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+STPopup.m"; path = "STPopup/UIViewController+STPopup.m"; sourceTree = "<group>"; };
+		F20C8BF029BA5A11D38B0FF0AD0B1D5A /* CarbonTabSwipeSegmentedControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CarbonTabSwipeSegmentedControl.h; path = CarbonKit/CarbonTabSwipeSegmentedControl.h; sourceTree = "<group>"; };
+		F43605F9793DA65FE330E519A33B93B3 /* CarbonTabSwipeNavigation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CarbonTabSwipeNavigation.h; path = CarbonKit/CarbonTabSwipeNavigation.h; sourceTree = "<group>"; };
+		F51991E16E5033CE02A143658C062E42 /* STPopupNavigationBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STPopupNavigationBar.m; path = STPopup/STPopupNavigationBar.m; sourceTree = "<group>"; };
+		F916C039C09555A57843B2237A05016A /* STPopup-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "STPopup-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0E7D93EB3FF2165812116AA4A23A4E32 /* Frameworks */ = {
+		1293C437ED60FB489669418BEB39B9E3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AF20CBF7ECDA3027CC156DCD9D91A0B /* Foundation.framework in Frameworks */,
+				D31655A7CF5B7656B13F1667C53D00AD /* Foundation.framework in Frameworks */,
+				741A3EFB462E0E53D06C0EA1B2929BF6 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1744E8418BCA38EF3E08E76D811DE4EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C601A77860CE0C9C0E45D56DA68EE35E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FCE133BF3D2967BF5FDD9B78DAB0A01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1144EF94D3742E379E0DA7B95388D64B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,11 +195,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CC638DCEDF44FB80017D290051D518CC /* Frameworks */ = {
+		EA405EC581F2AD090955289B15913F36 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				435726B5386DFFBE10E7246F2B73A6E7 /* Foundation.framework in Frameworks */,
+				FF1020AECC59A0638979AA858F0D1BC6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,106 +232,205 @@
 			path = "Target Support Files/Pods-BLEProject";
 			sourceTree = "<group>";
 		};
-		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E029D9AAED7679617632303F2A4C409B /* iOS */,
+				2691F93227E549B2A03FB9E6D0C3C623 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		32CEBE2DD4D588ADCF4A613B7043AC36 /* SwiftyJSON */ = {
+		1EE72D8F36222972B982AAD45EE17105 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				586563663B390D156DDF7DF0683F25C9 /* SwiftyJSON.swift */,
-				9F298E7F086C77DD99926220300C5144 /* Support Files */,
+				8DEAAE5DD38D0A862671E469F504C087 /* MBProgressHUD.h */,
+				22877F1DEC328D28A0DCA348AA163202 /* MBProgressHUD.m */,
+				4C706024E576F2987DEE4CFE3EBB4FCB /* Support Files */,
+			);
+			name = MBProgressHUD;
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		2691F93227E549B2A03FB9E6D0C3C623 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0D8EF2301073B01E30612B5B1BD94446 /* CoreGraphics.framework */,
+				6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */,
+				51498E299B7CB17BCC8B54F93C150FAA /* QuartzCore.framework */,
+				EC1FD743D031D373EDF29CC526F758E2 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		3DEE449A4633C0BF09F682DF49609ACF /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				9E18E616B90ADE5397BFEBC7609264EA /* SwiftyJSON.swift */,
+				3FC932F6773F1B5DFF99C7F13113114C /* Support Files */,
 			);
 			name = SwiftyJSON;
 			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		3FC932F6773F1B5DFF99C7F13113114C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AAFD3CD120E367F9BBBF47577F0690F /* Info.plist */,
+				C8A8F4DA1439F2E54ABBF1DA9F119174 /* SwiftyJSON.modulemap */,
+				7C7E17543FFF283802B226AB90468F2A /* SwiftyJSON.xcconfig */,
+				84B721FF1A6D837DA386570A8D652E2A /* SwiftyJSON-dummy.m */,
+				87D9F04B84052EADAC2F2CD375CF817F /* SwiftyJSON-prefix.pch */,
+				CCCAF800EE4272B307B4BBEB2AFE4D3C /* SwiftyJSON-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
+			sourceTree = "<group>";
+		};
+		4C706024E576F2987DEE4CFE3EBB4FCB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				019A9AA9E24AAEE4FE75A09E1E232382 /* Info.plist */,
+				2279930068FB55185BD27BBAA40E7424 /* MBProgressHUD.modulemap */,
+				769BC947CE8B1DF1EFFC5D89FD0E94E7 /* MBProgressHUD.xcconfig */,
+				9A7C451CF8EF166B40ACB2FF0292A62C /* MBProgressHUD-dummy.m */,
+				15338B5952986847335932A3FB48DC93 /* MBProgressHUD-prefix.pch */,
+				8ED29FA11888CC5D0FE8065E99A27463 /* MBProgressHUD-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MBProgressHUD";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
-				B1887543BD76E66B5193E515782E3FC7 /* Pods */,
-				9C32655992D3E245B03A8281336F891C /* Products */,
+				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
+				BFE5C05D4C932B225E492CBC0ED45C24 /* Pods */,
+				DDC238B8F64D8C5669DE23BD3916C6FB /* Products */,
 				0EE6A833B931729F2042C0C81621275B /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		7FD71C3BC853514B1D1A05901C4CA7A2 /* Support Files */ = {
+		93698BD8AFA0E49FF351A22E9146B2CC /* CarbonKit */ = {
 			isa = PBXGroup;
 			children = (
-				E26E097CE22C37806121BA7069F2E392 /* Info.plist */,
-				A4E13D87BC039D6BAE5C8A3755CFA817 /* MBProgressHUD.modulemap */,
-				B9B36ED0EF6660757A02CEABE98F69BC /* MBProgressHUD.xcconfig */,
-				AA7E29BC3A027A35CE5470417EEA6C53 /* MBProgressHUD-dummy.m */,
-				ED50E31F398363EE7EF3066ECB0FC845 /* MBProgressHUD-prefix.pch */,
-				86984BBDEA52397759B40C23D55014F7 /* MBProgressHUD-umbrella.h */,
+				E880B7B0B0D02EBF165D901F9D468FB3 /* CarbonKit.h */,
+				C52A3E1E5B1B6936FDC46FB7F4CA1B63 /* CarbonSwipeRefresh.h */,
+				8EA933075B263AB6673365B024902E91 /* CarbonSwipeRefresh.m */,
+				F43605F9793DA65FE330E519A33B93B3 /* CarbonTabSwipeNavigation.h */,
+				D495B1315D42E13B487D6E53DBBF0924 /* CarbonTabSwipeNavigation.m */,
+				88FBD1CC5FB1EFEF9273E7830F2334F2 /* CarbonTabSwipeScrollView.h */,
+				5B0AE49784CC606D0541A31FB76295C7 /* CarbonTabSwipeScrollView.m */,
+				F20C8BF029BA5A11D38B0FF0AD0B1D5A /* CarbonTabSwipeSegmentedControl.h */,
+				6BF705ACF6228FD38713B07E63F8AED6 /* CarbonTabSwipeSegmentedControl.m */,
+				9749CF179C3E1E5F94651635E0C085B1 /* Support Files */,
+			);
+			name = CarbonKit;
+			path = CarbonKit;
+			sourceTree = "<group>";
+		};
+		9749CF179C3E1E5F94651635E0C085B1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				884FA4F9D45848CD2DEF840BE6292F02 /* CarbonKit.modulemap */,
+				2EB722BE7BFC0061D6552A8604520B6F /* CarbonKit.xcconfig */,
+				C1B48D4C299DD72A3A7237A955BD91AF /* CarbonKit-dummy.m */,
+				5B661D8CEC4393586CF08C91D10C7AC4 /* CarbonKit-prefix.pch */,
+				1AFD8D0B6F0707E2E02A93A4C586E1D9 /* CarbonKit-umbrella.h */,
+				82E30CBB6602D5B6A157A00BE5F307EB /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/MBProgressHUD";
+			path = "../Target Support Files/CarbonKit";
 			sourceTree = "<group>";
 		};
-		94C807EAA38F1A5C9CC16A67408883C5 /* MBProgressHUD */ = {
+		AB74CE9C18B4AC836CA47F9A0462219E /* STPopup */ = {
 			isa = PBXGroup;
 			children = (
-				FCF2E8E2EE43B145A5FBD2EBAA7BC139 /* MBProgressHUD.h */,
-				1B2D9604662A23DCBE98FBA4EE7F2C4A /* MBProgressHUD.m */,
-				7FD71C3BC853514B1D1A05901C4CA7A2 /* Support Files */,
+				BF856629144F722BA4796EC5887F2FE7 /* STPopup.h */,
+				3B9753B1B1C6547F8E9A72C21EE4954D /* STPopupController.h */,
+				C238CE76CBC3935D79A88839AE292266 /* STPopupController.m */,
+				4C71DD7BDF88B81E9B392D1B3F0FC6A3 /* STPopupControllerTransitioningFade.h */,
+				5F338A79739BBF77CED8FB409A547C44 /* STPopupControllerTransitioningFade.m */,
+				262D11F6F3D46F21FF47706BBD3AB076 /* STPopupControllerTransitioningSlideVertical.h */,
+				B9F6D4CB83A45F92957219EF22B68A86 /* STPopupControllerTransitioningSlideVertical.m */,
+				E321E274A579A3BC3D0AAB6E981A92B1 /* STPopupLeftBarItem.h */,
+				EDAFC412C547FE209C6CDC593637EB67 /* STPopupLeftBarItem.m */,
+				DD8E96AEAB18D6BA6CB961C09DCA9E2E /* STPopupNavigationBar.h */,
+				F51991E16E5033CE02A143658C062E42 /* STPopupNavigationBar.m */,
+				A207AE5900CDBF1A71AC918E85858D0B /* UIResponder+STPopup.h */,
+				3D2D81A9D9FB7D43864049DA3C8B0F4D /* UIResponder+STPopup.m */,
+				A09AFAD7A1E794E2D86694C02A87F35D /* UIViewController+STPopup.h */,
+				F0C2F7EAD52500540B503A40B886416A /* UIViewController+STPopup.m */,
+				F90DE7254C343A4EFCD5F5248FAC48F8 /* Support Files */,
 			);
-			name = MBProgressHUD;
-			path = MBProgressHUD;
+			name = STPopup;
+			path = STPopup;
 			sourceTree = "<group>";
 		};
-		9C32655992D3E245B03A8281336F891C /* Products */ = {
+		BFE5C05D4C932B225E492CBC0ED45C24 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E496A92D79C788DC9F9A9EA7D5D302E6 /* MBProgressHUD.framework */,
-				A9F55576088510C1ED7D67004F025FCB /* Pods_BLEProject.framework */,
-				547D1EBBC61888ED2EC209BA5C1F66AA /* SwiftyJSON.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		9F298E7F086C77DD99926220300C5144 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7269BD888B482E5554CB16220B586C46 /* Info.plist */,
-				B43F56F60B0CEE411B3A0C4B7FFAD43A /* SwiftyJSON.modulemap */,
-				F0BC530128D809A529B00FAF468CD071 /* SwiftyJSON.xcconfig */,
-				F388D866AF4707C3EEC14A6F1E066B40 /* SwiftyJSON-dummy.m */,
-				1B468BAD2A40FED876D7B56271A05B1D /* SwiftyJSON-prefix.pch */,
-				F01834725672710C60E0706827B6371A /* SwiftyJSON-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftyJSON";
-			sourceTree = "<group>";
-		};
-		B1887543BD76E66B5193E515782E3FC7 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				94C807EAA38F1A5C9CC16A67408883C5 /* MBProgressHUD */,
-				32CEBE2DD4D588ADCF4A613B7043AC36 /* SwiftyJSON */,
+				93698BD8AFA0E49FF351A22E9146B2CC /* CarbonKit */,
+				1EE72D8F36222972B982AAD45EE17105 /* MBProgressHUD */,
+				AB74CE9C18B4AC836CA47F9A0462219E /* STPopup */,
+				3DEE449A4633C0BF09F682DF49609ACF /* SwiftyJSON */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		E029D9AAED7679617632303F2A4C409B /* iOS */ = {
+		DDC238B8F64D8C5669DE23BD3916C6FB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E5B476C7C3BDD4218E3B0B852CE57093 /* CoreGraphics.framework */,
-				82D40E632FA2A47E7DBA77D3D46FDFE8 /* Foundation.framework */,
-				E054739AD8EE5381E7FBABB3ACA80805 /* QuartzCore.framework */,
+				CCEBBB63237B1EF7119B101C20E10AA7 /* CarbonKit.framework */,
+				8ABA28F2E3D24A3B49000078C6E55644 /* MBProgressHUD.framework */,
+				19B6C58D1E7E331735BBA6C17E5C22CA /* Pods_BLEProject.framework */,
+				C0318BF919F7B0E73C36249D3CF4224F /* STPopup.framework */,
+				18CA32B6B2B5BC3A2C6D392E3BE8D75B /* SwiftyJSON.framework */,
 			);
-			name = iOS;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F90DE7254C343A4EFCD5F5248FAC48F8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6F1E74163F2D26E701866E1CC9CE7F1C /* Info.plist */,
+				A5581E22D20B4F34185EF41C67F69717 /* STPopup.modulemap */,
+				A0F8CAD3C1199A0175D8E03E6BC9C168 /* STPopup.xcconfig */,
+				7981D3FE86ECE06A9C090D11FEA4B24A /* STPopup-dummy.m */,
+				021160BE822EBA9AA27AE7716020B8A6 /* STPopup-prefix.pch */,
+				F916C039C09555A57843B2237A05016A /* STPopup-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/STPopup";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0C7AC4A83A2B6164DE184937026FF8A9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E67D71EAB5BE8D270E34D7293C34158 /* STPopup-umbrella.h in Headers */,
+				288E2224CC3ADD3427C026A31E7CBB3E /* STPopup.h in Headers */,
+				3F195EC064C94612A280DC98C22FC823 /* STPopupController.h in Headers */,
+				01648676E6908515082EC369BDCB4447 /* STPopupControllerTransitioningFade.h in Headers */,
+				530743BDB2EB7431110671D05BCF44E8 /* STPopupControllerTransitioningSlideVertical.h in Headers */,
+				2573D8EA4BE6099F42F5058F65302D9C /* STPopupLeftBarItem.h in Headers */,
+				961E183A8C45F4E5AAD028F80B8B4089 /* STPopupNavigationBar.h in Headers */,
+				7CC92302D846127459CD210C0708F85C /* UIResponder+STPopup.h in Headers */,
+				FC9294EC7E167884A8BA3EC20D5F5DAD /* UIViewController+STPopup.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		102DE85EBA0164060B1C8A1AE7125FD7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E65BB00BC6F10D87D318E6696E16E729 /* SwiftyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		197B7877D5D346F405BDD059EF96DBDC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -240,25 +440,85 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5EDA05794FE078FB717AEF4378684C7E /* Headers */ = {
+		BA184D5A11D52EFC2A2BC84878834BD4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				258A6C7612FDCD404566FC796B94D735 /* Pods-BLEProject-umbrella.h in Headers */,
+				0EF83262CD766C3C0B8B3727481F5DF8 /* CarbonKit-umbrella.h in Headers */,
+				99FBDAD19C67129DCCF4B819CF852C8E /* CarbonKit.h in Headers */,
+				C035141BE361CC778F7A8A12AC141E56 /* CarbonSwipeRefresh.h in Headers */,
+				64955BEA22805328D5805CB9F4E801F5 /* CarbonTabSwipeNavigation.h in Headers */,
+				B324B5ADE7BC072BF9827418BDA5D58D /* CarbonTabSwipeScrollView.h in Headers */,
+				1EADF9806A88919744E66993C412505E /* CarbonTabSwipeSegmentedControl.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DA4F2AFEE9B229A2A691EC566983F895 /* Headers */ = {
+		C379674088C5FB72431B1497A0679106 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1583FE36BC49D3E3069AEA0779F800D /* SwiftyJSON-umbrella.h in Headers */,
+				67F316C2B932E0EE69096CDE6DABF609 /* Pods-BLEProject-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		2A1E6D86E02B8061DC1E9040815B91C3 /* Pods-BLEProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA5BB0C1857FB2B78933BA97707A02C6 /* Build configuration list for PBXNativeTarget "Pods-BLEProject" */;
+			buildPhases = (
+				3F70C72435B58E7B48F989DD72CE7915 /* Sources */,
+				1744E8418BCA38EF3E08E76D811DE4EC /* Frameworks */,
+				C379674088C5FB72431B1497A0679106 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F1075BA6EC11CF5826FE5ADA3779714 /* PBXTargetDependency */,
+				786F1858DD2ECD6A6981EB2229B55F5A /* PBXTargetDependency */,
+				AEA9B7FD77E18A643E3427A4C8331090 /* PBXTargetDependency */,
+				DE5C3E001BBB9916E53A76A6E7E4B85D /* PBXTargetDependency */,
+			);
+			name = "Pods-BLEProject";
+			productName = "Pods-BLEProject";
+			productReference = 19B6C58D1E7E331735BBA6C17E5C22CA /* Pods_BLEProject.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		320BA4DF96781A6DE3D2C58117B095C9 /* STPopup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D19E8B3E500DD9CE1034DEDC5CF816B /* Build configuration list for PBXNativeTarget "STPopup" */;
+			buildPhases = (
+				EB2A3E6F22F1B789DA068938672C6B7C /* Sources */,
+				EA405EC581F2AD090955289B15913F36 /* Frameworks */,
+				0C7AC4A83A2B6164DE184937026FF8A9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = STPopup;
+			productName = STPopup;
+			productReference = C0318BF919F7B0E73C36249D3CF4224F /* STPopup.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		352F3CCD20CDBC5C9822654BDACCE6D0 /* CarbonKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6491274AC13664A2C5DDC36A60D5176 /* Build configuration list for PBXNativeTarget "CarbonKit" */;
+			buildPhases = (
+				F31B217E071034C33FEAC0FB0AF263B9 /* Sources */,
+				1293C437ED60FB489669418BEB39B9E3 /* Frameworks */,
+				BA184D5A11D52EFC2A2BC84878834BD4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CarbonKit;
+			productName = CarbonKit;
+			productReference = CCEBBB63237B1EF7119B101C20E10AA7 /* CarbonKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		41FA54D12162DAD51D02FC58A2CD5034 /* MBProgressHUD */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC1874913BA1F82C4953C3C7F551AB22 /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
@@ -273,35 +533,16 @@
 			);
 			name = MBProgressHUD;
 			productName = MBProgressHUD;
-			productReference = E496A92D79C788DC9F9A9EA7D5D302E6 /* MBProgressHUD.framework */;
+			productReference = 8ABA28F2E3D24A3B49000078C6E55644 /* MBProgressHUD.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		6CC2F34FE59D27F1D515DFA579092D08 /* Pods-BLEProject */ = {
+		BF19B936A9C8CBBEA90EFED82CC439F8 /* SwiftyJSON */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 71A4BAB1A8BDBF862A827A9E129635A1 /* Build configuration list for PBXNativeTarget "Pods-BLEProject" */;
+			buildConfigurationList = 4B897ADE80345DB25885322DD44245B0 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
 			buildPhases = (
-				4315BA20ED5E6A3447D765E750459CA3 /* Sources */,
-				CC638DCEDF44FB80017D290051D518CC /* Frameworks */,
-				5EDA05794FE078FB717AEF4378684C7E /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D1CF3671EBDECDA2BC192D952E5A2F85 /* PBXTargetDependency */,
-				5C79EDF6ABF1D210EA1A115F53ECDD89 /* PBXTargetDependency */,
-			);
-			name = "Pods-BLEProject";
-			productName = "Pods-BLEProject";
-			productReference = A9F55576088510C1ED7D67004F025FCB /* Pods_BLEProject.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		CC0129C2E5C71909A6F6BE8BDF3817A3 /* SwiftyJSON */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 326F718EBDFF243CC95724DD47ED016D /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
-			buildPhases = (
-				5D4033C0840D77FE9DBA5DCE4051A2F2 /* Sources */,
-				0E7D93EB3FF2165812116AA4A23A4E32 /* Frameworks */,
-				DA4F2AFEE9B229A2A691EC566983F895 /* Headers */,
+				B65E2977FF619A2D9C4A53CDEE41FDED /* Sources */,
+				9FCE133BF3D2967BF5FDD9B78DAB0A01 /* Frameworks */,
+				102DE85EBA0164060B1C8A1AE7125FD7 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -309,7 +550,7 @@
 			);
 			name = SwiftyJSON;
 			productName = SwiftyJSON;
-			productReference = 547D1EBBC61888ED2EC209BA5C1F66AA /* SwiftyJSON.framework */;
+			productReference = 18CA32B6B2B5BC3A2C6D392E3BE8D75B /* SwiftyJSON.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -329,32 +570,61 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 9C32655992D3E245B03A8281336F891C /* Products */;
+			productRefGroup = DDC238B8F64D8C5669DE23BD3916C6FB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				352F3CCD20CDBC5C9822654BDACCE6D0 /* CarbonKit */,
 				41FA54D12162DAD51D02FC58A2CD5034 /* MBProgressHUD */,
-				6CC2F34FE59D27F1D515DFA579092D08 /* Pods-BLEProject */,
-				CC0129C2E5C71909A6F6BE8BDF3817A3 /* SwiftyJSON */,
+				2A1E6D86E02B8061DC1E9040815B91C3 /* Pods-BLEProject */,
+				320BA4DF96781A6DE3D2C58117B095C9 /* STPopup */,
+				BF19B936A9C8CBBEA90EFED82CC439F8 /* SwiftyJSON */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4315BA20ED5E6A3447D765E750459CA3 /* Sources */ = {
+		3F70C72435B58E7B48F989DD72CE7915 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E890F0FB0D587EAE592A3B935F93373 /* Pods-BLEProject-dummy.m in Sources */,
+				D3248F1D41642F2F845A734B5D6F4961 /* Pods-BLEProject-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5D4033C0840D77FE9DBA5DCE4051A2F2 /* Sources */ = {
+		B65E2977FF619A2D9C4A53CDEE41FDED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82E0AFAFA2FBD156AF51837BDB8FD3A2 /* SwiftyJSON-dummy.m in Sources */,
-				1E6AB5BDF19D35F5E73501D5737E5D6C /* SwiftyJSON.swift in Sources */,
+				73888206F7A19C1D69BB059A324BBE98 /* SwiftyJSON-dummy.m in Sources */,
+				12D261C7D68A65B8F6BB66361DB80C98 /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB2A3E6F22F1B789DA068938672C6B7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39655F0B9A920BA0255CD8F36E2A946B /* STPopup-dummy.m in Sources */,
+				CD16CBB4A471BA019D5664635E818B09 /* STPopupController.m in Sources */,
+				DE23F9379DDD1A98A581A2C809499D47 /* STPopupControllerTransitioningFade.m in Sources */,
+				83B9719A1491B9090197E765D18F43A9 /* STPopupControllerTransitioningSlideVertical.m in Sources */,
+				551C83DF264136D169945766E7AC8C2A /* STPopupLeftBarItem.m in Sources */,
+				77F1CDCFE4AF46E2DE0A46C26DF9325B /* STPopupNavigationBar.m in Sources */,
+				242E4044CF56BD8E105E17C2FE9C5DCC /* UIResponder+STPopup.m in Sources */,
+				2D921B2F8730FC8CC4104B70DB65DB2E /* UIViewController+STPopup.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F31B217E071034C33FEAC0FB0AF263B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CFE136A1CE6F600769EFA298F74137E /* CarbonKit-dummy.m in Sources */,
+				045F3C1888DDE2D28D0266DC81E37196 /* CarbonSwipeRefresh.m in Sources */,
+				1B0D4DCF1788FCECCBB333F3A1A49394 /* CarbonTabSwipeNavigation.m in Sources */,
+				DA8CE2125946FBAD87EB5576CD0C1FDA /* CarbonTabSwipeScrollView.m in Sources */,
+				C58ADC57962868077B8C38AF5E67A82F /* CarbonTabSwipeSegmentedControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,21 +640,97 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5C79EDF6ABF1D210EA1A115F53ECDD89 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftyJSON;
-			target = CC0129C2E5C71909A6F6BE8BDF3817A3 /* SwiftyJSON */;
-			targetProxy = FA80F86D261F9AB99A90E01B624D814C /* PBXContainerItemProxy */;
-		};
-		D1CF3671EBDECDA2BC192D952E5A2F85 /* PBXTargetDependency */ = {
+		786F1858DD2ECD6A6981EB2229B55F5A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MBProgressHUD;
 			target = 41FA54D12162DAD51D02FC58A2CD5034 /* MBProgressHUD */;
-			targetProxy = B4379F8FC949D5B3C49F03743D0A5B8F /* PBXContainerItemProxy */;
+			targetProxy = E06F38095D766EFFDAD56454FA91EE92 /* PBXContainerItemProxy */;
+		};
+		7F1075BA6EC11CF5826FE5ADA3779714 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CarbonKit;
+			target = 352F3CCD20CDBC5C9822654BDACCE6D0 /* CarbonKit */;
+			targetProxy = 54C23A235D6FEDFDB09362DD20E5EC0E /* PBXContainerItemProxy */;
+		};
+		AEA9B7FD77E18A643E3427A4C8331090 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = STPopup;
+			target = 320BA4DF96781A6DE3D2C58117B095C9 /* STPopup */;
+			targetProxy = 252C50C08931DAB59C26904AC0FE18E5 /* PBXContainerItemProxy */;
+		};
+		DE5C3E001BBB9916E53A76A6E7E4B85D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			target = BF19B936A9C8CBBEA90EFED82CC439F8 /* SwiftyJSON */;
+			targetProxy = 8A57FD592D1C2770B6CDC193CE8494B2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		3E7C3BD69D247DC2BB6EB7F186226E76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0F8CAD3C1199A0175D8E03E6BC9C168 /* STPopup.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/STPopup/STPopup-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/STPopup/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/STPopup/STPopup.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = STPopup;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4C4462AC0F119C267EB888C3A15A174F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EB722BE7BFC0061D6552A8604520B6F /* CarbonKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CarbonKit/CarbonKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CarbonKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CarbonKit/CarbonKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CarbonKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -431,7 +777,7 @@
 		};
 		5A7D61BFAF476FFEAAC1C3C5B50DD91C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9B36ED0EF6660757A02CEABE98F69BC /* MBProgressHUD.xcconfig */;
+			baseConfigurationReference = 769BC947CE8B1DF1EFFC5D89FD0E94E7 /* MBProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -461,9 +807,9 @@
 			};
 			name = Release;
 		};
-		5C4DE75FD8D58EF624D3764FCC2EF1B9 /* Release */ = {
+		6CC114B05BFEEB0E7966B9E30F6D8DE5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8AD7CAB736447927A9C667ADFCA87139 /* Pods-BLEProject.release.xcconfig */;
+			baseConfigurationReference = 7C7E17543FFF283802B226AB90468F2A /* SwiftyJSON.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -476,25 +822,86 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-BLEProject/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BLEProject/Pods-BLEProject.modulemap";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_BLEProject;
+				PRODUCT_NAME = SwiftyJSON;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		713E3F33F86D95B76F7E13451251BA1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EB722BE7BFC0061D6552A8604520B6F /* CarbonKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CarbonKit/CarbonKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CarbonKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CarbonKit/CarbonKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = CarbonKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9B4CC247B20666AF0F43867C06F03375 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0F8CAD3C1199A0175D8E03E6BC9C168 /* STPopup.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/STPopup/STPopup-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/STPopup/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/STPopup/STPopup.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = STPopup;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -536,15 +943,15 @@
 			};
 			name = Release;
 		};
-		C7BE36DFBE943E654D6167C842615429 /* Release */ = {
+		C17E9231C28D55D810747587370510D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0BC530128D809A529B00FAF468CD071 /* SwiftyJSON.xcconfig */;
+			baseConfigurationReference = 7C7E17543FFF283802B226AB90468F2A /* SwiftyJSON.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -557,20 +964,21 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = SwiftyJSON;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		D75065D84EBB32D4AF0CA10C29B62DBB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9B36ED0EF6660757A02CEABE98F69BC /* MBProgressHUD.xcconfig */;
+			baseConfigurationReference = 769BC947CE8B1DF1EFFC5D89FD0E94E7 /* MBProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -600,7 +1008,42 @@
 			};
 			name = Debug;
 		};
-		DC362FE5E8929C001D41415F57A8565C /* Debug */ = {
+		F5A1D96A2445679EE0A21F1DA81FF8BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AD7CAB736447927A9C667ADFCA87139 /* Pods-BLEProject.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BLEProject/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BLEProject/Pods-BLEProject.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_BLEProject;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F7754338FE3DA0F37C052A537DFED0B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8B81C1830DD3242517DFBF02AA221920 /* Pods-BLEProject.debug.xcconfig */;
 			buildSettings = {
@@ -636,39 +1079,6 @@
 			};
 			name = Debug;
 		};
-		F481EDD3193264BE4406C22637625832 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0BC530128D809A529B00FAF468CD071 /* SwiftyJSON.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SwiftyJSON;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -681,20 +1091,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		326F718EBDFF243CC95724DD47ED016D /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+		4B897ADE80345DB25885322DD44245B0 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F481EDD3193264BE4406C22637625832 /* Debug */,
-				C7BE36DFBE943E654D6167C842615429 /* Release */,
+				C17E9231C28D55D810747587370510D7 /* Debug */,
+				6CC114B05BFEEB0E7966B9E30F6D8DE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		71A4BAB1A8BDBF862A827A9E129635A1 /* Build configuration list for PBXNativeTarget "Pods-BLEProject" */ = {
+		9D19E8B3E500DD9CE1034DEDC5CF816B /* Build configuration list for PBXNativeTarget "STPopup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DC362FE5E8929C001D41415F57A8565C /* Debug */,
-				5C4DE75FD8D58EF624D3764FCC2EF1B9 /* Release */,
+				9B4CC247B20666AF0F43867C06F03375 /* Debug */,
+				3E7C3BD69D247DC2BB6EB7F186226E76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6491274AC13664A2C5DDC36A60D5176 /* Build configuration list for PBXNativeTarget "CarbonKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				713E3F33F86D95B76F7E13451251BA1E /* Debug */,
+				4C4462AC0F119C267EB888C3A15A174F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -704,6 +1123,15 @@
 			buildConfigurations = (
 				D75065D84EBB32D4AF0CA10C29B62DBB /* Debug */,
 				5A7D61BFAF476FFEAAC1C3C5B50DD91C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA5BB0C1857FB2B78933BA97707A02C6 /* Build configuration list for PBXNativeTarget "Pods-BLEProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7754338FE3DA0F37C052A537DFED0B9 /* Debug */,
+				F5A1D96A2445679EE0A21F1DA81FF8BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

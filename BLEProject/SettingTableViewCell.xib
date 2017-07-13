@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="57" id="KGk-i7-Jjw" customClass="SettingTableViewCell" customModule="BLEProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="510" height="57"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="510" height="56.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8j-pD-HQS">
+                        <rect key="frame" x="413" y="13.5" width="85" height="30"/>
+                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                        <state key="normal" title="Button">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="btnReleaseTouch:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="c17-Dl-AVs"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dX9-e5-sbg">
+                        <rect key="frame" x="307.5" y="13.5" width="85.5" height="30"/>
+                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                        <state key="normal" title="Button">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="btnPressTouch:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="pT9-qO-4mX"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PX4-EH-h8t">
+                        <rect key="frame" x="8" y="18" width="287.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="m8j-pD-HQS" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1:6" id="05I-i4-qQm"/>
+                    <constraint firstItem="dX9-e5-sbg" firstAttribute="top" secondItem="m8j-pD-HQS" secondAttribute="top" id="0IT-Kf-9D8"/>
+                    <constraint firstItem="dX9-e5-sbg" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="FVJ-nY-SA2"/>
+                    <constraint firstItem="PX4-EH-h8t" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Ffe-4P-7c1"/>
+                    <constraint firstItem="dX9-e5-sbg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Hqf-n4-sX0"/>
+                    <constraint firstItem="PX4-EH-h8t" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="I1A-s1-rPA"/>
+                    <constraint firstItem="m8j-pD-HQS" firstAttribute="leading" secondItem="dX9-e5-sbg" secondAttribute="trailing" constant="20" id="Okv-dJ-c54"/>
+                    <constraint firstItem="dX9-e5-sbg" firstAttribute="bottom" secondItem="m8j-pD-HQS" secondAttribute="bottom" id="RBK-EH-aJe"/>
+                    <constraint firstItem="dX9-e5-sbg" firstAttribute="leading" secondItem="PX4-EH-h8t" secondAttribute="trailing" constant="12" id="YS3-hf-nIj"/>
+                    <constraint firstItem="m8j-pD-HQS" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mvQ-c8-D1q"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dX9-e5-sbg" secondAttribute="bottom" constant="8" id="o8g-xY-6R2"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="PX4-EH-h8t" secondAttribute="bottom" constant="8" id="r7W-Wj-pBP"/>
+                    <constraint firstItem="dX9-e5-sbg" firstAttribute="width" secondItem="m8j-pD-HQS" secondAttribute="width" id="sTr-NK-AIM"/>
+                    <constraint firstItem="PX4-EH-h8t" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="umH-qb-RI4"/>
+                    <constraint firstAttribute="trailing" secondItem="m8j-pD-HQS" secondAttribute="trailing" constant="12" id="ypQ-zf-6U6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnPress" destination="dX9-e5-sbg" id="ezJ-ah-vEL"/>
+                <outlet property="btnRelease" destination="m8j-pD-HQS" id="pO7-oI-8yn"/>
+                <outlet property="lblTitle" destination="PX4-EH-h8t" id="eWr-sr-Sns"/>
+            </connections>
+            <point key="canvasLocation" x="-22" y="-63.5"/>
+        </tableViewCell>
+    </objects>
+</document>

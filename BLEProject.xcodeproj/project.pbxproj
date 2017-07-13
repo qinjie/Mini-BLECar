@@ -13,8 +13,21 @@
 		363A042D1F037ADC00788FE9 /* UIColor-Hex-Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A042A1F037ADC00788FE9 /* UIColor-Hex-Swift.swift */; };
 		363A042E1F037ADC00788FE9 /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A042B1F037ADC00788FE9 /* UIView+IBInspectable.swift */; };
 		363A042F1F037ADC00788FE9 /* UIView+IRAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A042C1F037ADC00788FE9 /* UIView+IRAnimation.swift */; };
+		363B5ABB1F16FA0700F30D3F /* PopUpSetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363B5AB91F16FA0700F30D3F /* PopUpSetUpViewController.swift */; };
+		363B5ABC1F16FA0700F30D3F /* PopUpSetUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 363B5ABA1F16FA0700F30D3F /* PopUpSetUpViewController.xib */; };
+		363B5ABF1F16FA9100F30D3F /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363B5ABD1F16FA9100F30D3F /* SettingTableViewCell.swift */; };
+		363B5AC01F16FA9100F30D3F /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 363B5ABE1F16FA9100F30D3F /* SettingTableViewCell.xib */; };
 		3640D1991F023667001415F0 /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3640D1971F023667001415F0 /* TestingViewController.swift */; };
 		3640D19A1F023667001415F0 /* TestingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3640D1981F023667001415F0 /* TestingViewController.xib */; };
+		364A97A91F1458DA0053D948 /* UIController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 364A97A81F1458DA0053D948 /* UIController.xib */; };
+		364A97AB1F1462CB0053D948 /* UIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364A97AA1F1462CB0053D948 /* UIController.swift */; };
+		3663C1141F0B212800E5F76E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663C1121F0B212800E5F76E /* MainViewController.swift */; };
+		3663C1151F0B212800E5F76E /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3663C1131F0B212800E5F76E /* MainViewController.xib */; };
+		3663C1191F0B3B7000E5F76E /* ControllButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663C1171F0B3B7000E5F76E /* ControllButtonViewController.swift */; };
+		3663C11A1F0B3B7000E5F76E /* ControllButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3663C1181F0B3B7000E5F76E /* ControllButtonViewController.xib */; };
+		3663C11E1F0B42A300E5F76E /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663C11C1F0B42A300E5F76E /* PopUpViewController.swift */; };
+		3663C11F1F0B42A300E5F76E /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3663C11D1F0B42A300E5F76E /* PopUpViewController.xib */; };
+		3663C1211F0B468900E5F76E /* TmpValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663C1201F0B468900E5F76E /* TmpValue.swift */; };
 		368765F61EFC9E77004082DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368765F51EFC9E77004082DB /* AppDelegate.swift */; };
 		368765F81EFC9E77004082DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368765F71EFC9E77004082DB /* ViewController.swift */; };
 		368765FB1EFC9E77004082DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 368765F91EFC9E77004082DB /* Main.storyboard */; };
@@ -25,6 +38,8 @@
 		3687660F1EFC9FA6004082DB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3687660E1EFC9FA6004082DB /* BaseViewController.swift */; };
 		368766131EFCA470004082DB /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368766111EFCA470004082DB /* DeviceTableViewCell.swift */; };
 		368766141EFCA470004082DB /* DeviceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368766121EFCA470004082DB /* DeviceTableViewCell.xib */; };
+		368F21131F15B29000730DD7 /* DesignableSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F21121F15B29000730DD7 /* DesignableSlider.swift */; };
+		36E1C72E1F0CC46E00B84C04 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E1C72D1F0CC46E00B84C04 /* ExternalAccessory.framework */; };
 		36F70DFC1F05F01B006429A2 /* ControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F70DFA1F05F01A006429A2 /* ControllerViewController.swift */; };
 		36F70DFD1F05F01B006429A2 /* ControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F70DFB1F05F01A006429A2 /* ControllerViewController.xib */; };
 /* End PBXBuildFile section */
@@ -36,8 +51,21 @@
 		363A042A1F037ADC00788FE9 /* UIColor-Hex-Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Hex-Swift.swift"; sourceTree = "<group>"; };
 		363A042B1F037ADC00788FE9 /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
 		363A042C1F037ADC00788FE9 /* UIView+IRAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+IRAnimation.swift"; sourceTree = "<group>"; };
+		363B5AB91F16FA0700F30D3F /* PopUpSetUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpSetUpViewController.swift; sourceTree = "<group>"; };
+		363B5ABA1F16FA0700F30D3F /* PopUpSetUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpSetUpViewController.xib; sourceTree = "<group>"; };
+		363B5ABD1F16FA9100F30D3F /* SettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		363B5ABE1F16FA9100F30D3F /* SettingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		3640D1971F023667001415F0 /* TestingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingViewController.swift; sourceTree = "<group>"; };
 		3640D1981F023667001415F0 /* TestingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestingViewController.xib; sourceTree = "<group>"; };
+		364A97A81F1458DA0053D948 /* UIController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIController.xib; sourceTree = "<group>"; };
+		364A97AA1F1462CB0053D948 /* UIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIController.swift; sourceTree = "<group>"; };
+		3663C1121F0B212800E5F76E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3663C1131F0B212800E5F76E /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		3663C1171F0B3B7000E5F76E /* ControllButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllButtonViewController.swift; sourceTree = "<group>"; };
+		3663C1181F0B3B7000E5F76E /* ControllButtonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ControllButtonViewController.xib; sourceTree = "<group>"; };
+		3663C11C1F0B42A300E5F76E /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		3663C11D1F0B42A300E5F76E /* PopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
+		3663C1201F0B468900E5F76E /* TmpValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TmpValue.swift; sourceTree = "<group>"; };
 		368765F21EFC9E77004082DB /* BLEProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLEProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		368765F51EFC9E77004082DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		368765F71EFC9E77004082DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +78,8 @@
 		3687660E1EFC9FA6004082DB /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		368766111EFCA470004082DB /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceTableViewCell.swift; path = Controller/ScanningViewController/CellDevice/DeviceTableViewCell.swift; sourceTree = "<group>"; };
 		368766121EFCA470004082DB /* DeviceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DeviceTableViewCell.xib; path = Controller/ScanningViewController/CellDevice/DeviceTableViewCell.xib; sourceTree = "<group>"; };
+		368F21121F15B29000730DD7 /* DesignableSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableSlider.swift; sourceTree = "<group>"; };
+		36E1C72D1F0CC46E00B84C04 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		36F70DFA1F05F01A006429A2 /* ControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerViewController.swift; sourceTree = "<group>"; };
 		36F70DFB1F05F01A006429A2 /* ControllerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ControllerViewController.xib; sourceTree = "<group>"; };
 		7EAC291DF4C738EF5F3B82C1 /* Pods_BLEProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLEProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36E1C72E1F0CC46E00B84C04 /* ExternalAccessory.framework in Frameworks */,
 				05BBA3EF1F316C8662A13FE8 /* Pods_BLEProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +102,7 @@
 		2461086DFDFC9B06BDFC561B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				36E1C72D1F0CC46E00B84C04 /* ExternalAccessory.framework */,
 				7EAC291DF4C738EF5F3B82C1 /* Pods_BLEProject.framework */,
 			);
 			name = Frameworks;
@@ -83,6 +115,17 @@
 				363A04251F03580700788FE9 /* DisplayViewController.xib */,
 			);
 			name = DisplayVC;
+			sourceTree = "<group>";
+		};
+		363B5AB81F16F9DC00F30D3F /* PopUpSetUp */ = {
+			isa = PBXGroup;
+			children = (
+				363B5AB91F16FA0700F30D3F /* PopUpSetUpViewController.swift */,
+				363B5ABA1F16FA0700F30D3F /* PopUpSetUpViewController.xib */,
+				363B5ABD1F16FA9100F30D3F /* SettingTableViewCell.swift */,
+				363B5ABE1F16FA9100F30D3F /* SettingTableViewCell.xib */,
+			);
+			name = PopUpSetUp;
 			sourceTree = "<group>";
 		};
 		3640D1961F02364C001415F0 /* TestVC  */ = {
@@ -100,8 +143,32 @@
 				363A042A1F037ADC00788FE9 /* UIColor-Hex-Swift.swift */,
 				363A042B1F037ADC00788FE9 /* UIView+IBInspectable.swift */,
 				363A042C1F037ADC00788FE9 /* UIView+IRAnimation.swift */,
+				368F21121F15B29000730DD7 /* DesignableSlider.swift */,
 			);
 			name = Extension;
+			sourceTree = "<group>";
+		};
+		3663C1161F0B3B5E00E5F76E /* ControlButtonVC */ = {
+			isa = PBXGroup;
+			children = (
+				363B5AB81F16F9DC00F30D3F /* PopUpSetUp */,
+				3663C11B1F0B417A00E5F76E /* PopUpVC */,
+				3663C1171F0B3B7000E5F76E /* ControllButtonViewController.swift */,
+				3663C1181F0B3B7000E5F76E /* ControllButtonViewController.xib */,
+				364A97A81F1458DA0053D948 /* UIController.xib */,
+				364A97AA1F1462CB0053D948 /* UIController.swift */,
+			);
+			name = ControlButtonVC;
+			sourceTree = "<group>";
+		};
+		3663C11B1F0B417A00E5F76E /* PopUpVC */ = {
+			isa = PBXGroup;
+			children = (
+				3663C11C1F0B42A300E5F76E /* PopUpViewController.swift */,
+				3663C11D1F0B42A300E5F76E /* PopUpViewController.xib */,
+				3663C1201F0B468900E5F76E /* TmpValue.swift */,
+			);
+			name = PopUpVC;
 			sourceTree = "<group>";
 		};
 		368765E91EFC9E77004082DB = {
@@ -141,10 +208,13 @@
 		368766071EFC9EEC004082DB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3663C1161F0B3B5E00E5F76E /* ControlButtonVC */,
 				36F70DF91F05F006006429A2 /* ControllerVC */,
 				363A04231F0357F500788FE9 /* DisplayVC */,
 				3687660D1EFC9F1D004082DB /* ScanningVC */,
 				3687660E1EFC9FA6004082DB /* BaseViewController.swift */,
+				3663C1121F0B212800E5F76E /* MainViewController.swift */,
+				3663C1131F0B212800E5F76E /* MainViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -257,13 +327,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				363B5ABC1F16FA0700F30D3F /* PopUpSetUpViewController.xib in Resources */,
 				36F70DFD1F05F01B006429A2 /* ControllerViewController.xib in Resources */,
 				368766001EFC9E77004082DB /* LaunchScreen.storyboard in Resources */,
 				3640D19A1F023667001415F0 /* TestingViewController.xib in Resources */,
 				363A04271F03580700788FE9 /* DisplayViewController.xib in Resources */,
+				3663C11A1F0B3B7000E5F76E /* ControllButtonViewController.xib in Resources */,
+				3663C1151F0B212800E5F76E /* MainViewController.xib in Resources */,
+				3663C11F1F0B42A300E5F76E /* PopUpViewController.xib in Resources */,
+				364A97A91F1458DA0053D948 /* UIController.xib in Resources */,
 				368765FD1EFC9E77004082DB /* Assets.xcassets in Resources */,
 				368765FB1EFC9E77004082DB /* Main.storyboard in Resources */,
 				3687660C1EFC9F18004082DB /* ScanningViewController.xib in Resources */,
+				363B5AC01F16FA9100F30D3F /* SettingTableViewCell.xib in Resources */,
 				368766141EFCA470004082DB /* DeviceTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,14 +402,22 @@
 				368766131EFCA470004082DB /* DeviceTableViewCell.swift in Sources */,
 				368765F81EFC9E77004082DB /* ViewController.swift in Sources */,
 				3687660F1EFC9FA6004082DB /* BaseViewController.swift in Sources */,
+				3663C1141F0B212800E5F76E /* MainViewController.swift in Sources */,
 				363A042D1F037ADC00788FE9 /* UIColor-Hex-Swift.swift in Sources */,
 				3640D1991F023667001415F0 /* TestingViewController.swift in Sources */,
 				3687660B1EFC9F18004082DB /* ScanningViewController.swift in Sources */,
 				363A042E1F037ADC00788FE9 /* UIView+IBInspectable.swift in Sources */,
+				368F21131F15B29000730DD7 /* DesignableSlider.swift in Sources */,
 				363A04261F03580700788FE9 /* DisplayViewController.swift in Sources */,
+				3663C11E1F0B42A300E5F76E /* PopUpViewController.swift in Sources */,
 				36F70DFC1F05F01B006429A2 /* ControllerViewController.swift in Sources */,
+				363B5ABF1F16FA9100F30D3F /* SettingTableViewCell.swift in Sources */,
 				363A042F1F037ADC00788FE9 /* UIView+IRAnimation.swift in Sources */,
+				363B5ABB1F16FA0700F30D3F /* PopUpSetUpViewController.swift in Sources */,
 				368765F61EFC9E77004082DB /* AppDelegate.swift in Sources */,
+				3663C1211F0B468900E5F76E /* TmpValue.swift in Sources */,
+				3663C1191F0B3B7000E5F76E /* ControllButtonViewController.swift in Sources */,
+				364A97AB1F1462CB0053D948 /* UIController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,15 +1,21 @@
 PODS:
+  - CarbonKit (2.1.9)
   - MBProgressHUD (1.0.0)
+  - STPopup (1.8.2)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
+  - CarbonKit
   - MBProgressHUD (~> 1.0.0)
+  - STPopup
   - SwiftyJSON
 
 SPEC CHECKSUMS:
+  CarbonKit: af16a9c0d2b6c908a5985fe4633424d38c9bfc0a
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  STPopup: b69b3e7484ef7d2baec5f9ab2939f8a7bcdfe218
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: c3c97b9bacd97ffd5631d6f644f934cc30951e17
+PODFILE CHECKSUM: 25a4b279ea62237c5722dd72a21686271e57da66
 
 COCOAPODS: 1.2.0
