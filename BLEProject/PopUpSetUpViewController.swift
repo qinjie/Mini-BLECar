@@ -10,6 +10,11 @@ import UIKit
 import STPopup
 import SwiftyJSON
 
+enum TypeControl {
+    case accelerometer
+    case gesture
+}
+
 class DataText {
     var title :String
     var pressText : String
@@ -32,8 +37,10 @@ class DataText {
 
 class PopUpSetUpViewController: UIViewController {
     @IBOutlet weak var tbl : UITableView!
+    @IBOutlet weak var btnType : UIButton!
     var listData = [DataText]()
     var textField : UITextField?
+    var typeControl : TypeControl = .gesture
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -59,7 +66,17 @@ class PopUpSetUpViewController: UIViewController {
                 self.listData.append(obj)
             }
         }
+        
         self.tbl.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.typeControl = TmpValue.typeControl
+        if (self.typeControl == .gesture){
+            self.btnType.setTitle("    Gesture control    ", for: UIControlState.normal)
+        } else {
+            self.btnType.setTitle("    Accelerometer control    ", for: UIControlState.normal)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -68,6 +85,19 @@ class PopUpSetUpViewController: UIViewController {
     }
     
     @IBAction func closeTouchUp(_ sender : UIButton){
+        self.popupController?.dismiss()
+    }
+    
+    @IBAction func changeTypeControl(_ sender : UIButton){
+        self.typeControl = TmpValue.typeControl
+        if (self.typeControl == .gesture){
+            self.typeControl = .accelerometer
+            self.btnType.setTitle("    Accelerometer control    ", for: UIControlState.normal)
+        } else {
+            self.typeControl = .gesture
+            self.btnType.setTitle("    Gesture control    ", for: UIControlState.normal)
+        }
+        TmpValue.typeControl = self.typeControl
         self.popupController?.dismiss()
     }
     

@@ -56,12 +56,12 @@ class ScanningViewController: BaseViewController {
     }
     
     func refresher() {
-        if !self.centralManager.isScanning {
-            self.centralManager.scanForPeripherals(withServices: nil, options: nil)
-        }
-        self.peripherals.removeAll()
-        self.tableView.reloadData()
-        self.refreshControl.endRefreshing()
+//        if !self.centralManager.isScanning {
+//            self.centralManager.scanForPeripherals(withServices: nil, options: nil)
+//        }
+//        self.peripherals.removeAll()
+//        self.tableView.reloadData()
+//        self.refreshControl.endRefreshing()
     }
 
     override func didReceiveMemoryWarning() {

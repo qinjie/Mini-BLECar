@@ -12,4 +12,5 @@ public class TmpValue: NSObject {
     static var pressText : String = ""
     static var  releaseText : String = ""
     static var isChange : Bool = false
+    static var typeControl : TypeControl = .gesture
 }

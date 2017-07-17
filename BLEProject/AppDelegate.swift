@@ -24,8 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let main = MainViewController(nibName: "MainViewController", bundle: nil)
         let controlBtnVC = ControllButtonViewController(nibName: "ControllButtonViewController", bundle: nil)
         let uic = UIController(nibName: "UIController", bundle: nil)
+        
+        let controlVC = ControllerViewController(nibName: "ControllerViewController", bundle: nil)
         let nav = UINavigationController(rootViewController: vc)
-        self.window?.rootViewController = nav
+        self.window?.rootViewController = controlVC
         self.window?.makeKeyAndVisible()
         
         return true
@@ -69,6 +71,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.listData.append(DataText(title: "Speed 80", pressText: "8", releaseText: "", type: 1))
         self.listData.append(DataText(title: "Speed 90", pressText: "9", releaseText: "", type: 1))
         self.listData.append(DataText(title: "Speed 100", pressText: "q", releaseText: "", type: 1))
+        self.listData.append(DataText(title: "Rotate Left", pressText: "q", releaseText: "", type: 1))
+        self.listData.append(DataText(title: "Rotate Right", pressText: "q", releaseText: "", type: 1))
     }
     
     func convertBtnToJSON(item : DataText) -> String {

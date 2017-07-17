@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopUpSetUpViewController" customModule="BLEProject" customModuleProvider="target">
             <connections>
+                <outlet property="btnType" destination="Xfu-qV-Y39" id="tLZ-Y4-uaB"/>
                 <outlet property="tbl" destination="Ga6-Pa-4Kl" id="AmS-QW-vtp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ga6-Pa-4Kl">
-                    <rect key="frame" x="0.0" y="65" width="687" height="351"/>
+                    <rect key="frame" x="0.0" y="121" width="687" height="295"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="g09-QL-mo6"/>
@@ -58,7 +60,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SFd-39-Hw7">
-                    <rect key="frame" x="0.0" y="35" width="687" height="30"/>
+                    <rect key="frame" x="0.0" y="91" width="687" height="30"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQq-KG-KMX">
                             <rect key="frame" x="589" y="4" width="86" height="22"/>
@@ -104,14 +106,46 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uoN-b4-hsZ">
+                    <rect key="frame" x="0.0" y="35" width="687" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfu-qV-Y39">
+                            <rect key="frame" x="201.5" y="0.5" width="284" height="39"/>
+                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                            <state key="normal" title="    Accelerometer control    ">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="changeTypeControl:" destination="-1" eventType="touchUpInside" id="gZq-5b-Vh5"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Xfu-qV-Y39" firstAttribute="centerY" secondItem="uoN-b4-hsZ" secondAttribute="centerY" id="Ux4-1M-nFz"/>
+                        <constraint firstAttribute="height" constant="40" id="XdA-dP-Sbs"/>
+                        <constraint firstItem="Xfu-qV-Y39" firstAttribute="centerX" secondItem="uoN-b4-hsZ" secondAttribute="centerX" id="dGt-Pe-T77"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Ga6-Pa-4Kl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6dO-vW-g4X"/>
+                <constraint firstItem="SFd-39-Hw7" firstAttribute="top" secondItem="uoN-b4-hsZ" secondAttribute="bottom" constant="16" id="NfB-AJ-awj"/>
                 <constraint firstItem="SFd-39-Hw7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Oma-IT-CwN"/>
+                <constraint firstItem="uoN-b4-hsZ" firstAttribute="top" secondItem="x7B-dr-zYf" secondAttribute="bottom" id="VDX-yi-k30"/>
+                <constraint firstItem="uoN-b4-hsZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="WQ8-9C-y2y"/>
                 <constraint firstItem="x7B-dr-zYf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Wrc-eV-yWQ"/>
-                <constraint firstItem="SFd-39-Hw7" firstAttribute="top" secondItem="x7B-dr-zYf" secondAttribute="bottom" id="X9a-KG-cQy"/>
                 <constraint firstAttribute="trailing" secondItem="SFd-39-Hw7" secondAttribute="trailing" id="aNr-CJ-TyV"/>
+                <constraint firstAttribute="trailing" secondItem="uoN-b4-hsZ" secondAttribute="trailing" id="gNg-Jw-2dL"/>
                 <constraint firstItem="Ga6-Pa-4Kl" firstAttribute="top" secondItem="SFd-39-Hw7" secondAttribute="bottom" id="jit-rB-osQ"/>
                 <constraint firstAttribute="trailing" secondItem="x7B-dr-zYf" secondAttribute="trailing" id="nGq-Zr-vBF"/>
                 <constraint firstItem="x7B-dr-zYf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="r88-vD-DnQ"/>

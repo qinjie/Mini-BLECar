@@ -253,8 +253,6 @@ class ControllButtonViewController: UIViewController {
         let b = str
         
         let data = b.data(using: String.Encoding.utf8)
-        let a = self.connectingPeripheral?.maximumWriteValueLength(for: CBCharacteristicWriteType.withoutResponse)
-        
         
         let countBytes = ByteCountFormatter()
         countBytes.allowedUnits = [.useBytes]

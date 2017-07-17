@@ -10,6 +10,8 @@ import UIKit
 import CoreBluetooth
 import STPopup
 import SwiftyJSON
+import CoreMotion
+import CoreLocation
 
 enum TypeButton {
     case connect
@@ -39,6 +41,8 @@ enum TypeButton {
     case speed8
     case speed9
     case speedMax
+    case rotateLeft
+    case rotateRight
 }
 
 class ButtonData2 : NSObject {
@@ -51,6 +55,10 @@ class ButtonData2 : NSObject {
 }
 
 class UIController: UIViewController {
+    let UPDATE_INTERVAL = 0.2
+    let EPSILON = 0.1
+    var motionManager : CMMotionManager!
+    
     @IBOutlet weak var slider : DesignableSlider!
     @IBOutlet weak var btnUp : UIButton!
     @IBOutlet weak var btnDown : UIButton!
@@ -66,6 +74,8 @@ class UIController: UIViewController {
     @IBOutlet weak var Direction10 : UIImageView!
     @IBOutlet weak var Direction11 : UIImageView!
     
+    @IBOutlet weak var view1 : UIView!
+    @IBOutlet weak var view2 : UIView!
     var listButton = [DataText]()
     var centralManager : CBCentralManager?
     var connectingPeripheral : CBPeripheral?
@@ -79,12 +89,127 @@ class UIController: UIViewController {
     var listData = [ButtonData2]()
     var listDirection = [UIImageView]()
     var currentTouchUp = [Int]()
+    var typeControl : TypeControl = .gesture
     override func viewDidLoad() {
         super.viewDidLoad()        
         self.setUp()
+        
+        self.motionManager = CMMotionManager()
+        self.motionManager.accelerometerUpdateInterval = TimeInterval.init(UPDATE_INTERVAL)
+        self.motionManager.deviceMotionUpdateInterval = TimeInterval.init(UPDATE_INTERVAL)
         // Do any additional setup after loading the view.
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.seperateData()
+        self.setUpData()
+        self.typeControl = TmpValue.typeControl
+        self.configure()
+    }
+    
+    func configure(){
+        if ( self.typeControl == .gesture){
+            self.motionManager.stopDeviceMotionUpdates()
+            self.view1.isHidden = false
+            self.view2.isHidden = false
+        } else {
+            self.view1.isHidden = true
+            self.view2.isHidden = true
+            self.readAcceleratorData()
+        }
+    }
+    
+    func readAcceleratorData(){
+        if ( self.motionManager.isDeviceMotionAvailable == true) {
+            self.motionManager.startDeviceMotionUpdates(to: OperationQueue.main, withHandler: { (devicemotion, error) in
+                let attitude = devicemotion?.attitude
+                if (attitude != nil) {
+                    let x = -attitude!.quaternion.y
+                    let y = attitude!.quaternion.x
+                    let EPSILON = self.EPSILON
+                    if (( x < 0.0 - EPSILON) && ( x > -0.5 - EPSILON)) { // Front
+                        if (( y < 0.0 - EPSILON) && (y > -0.5 - EPSILON) ) { //Left
+                            if ( self.currentTarget != nil){
+                                self.changeStatus(imgView: self.currentTarget!, status: false)
+                            }
+                            self.changeStatus(imgView: self.listDirection[7], status: true)
+                            self.sendData(str: self.listButton[TypeButton.forward_left.hashValue].pressText)
+                        } else if ( ( y > 0.0 + EPSILON) && ( y < 0.5 - EPSILON)) { // RIGHT
+                            if ( self.currentTarget != nil){
+                                self.changeStatus(imgView: self.currentTarget!, status: false)
+                            }
+                            self.changeStatus(imgView: self.listDirection[1], status: true)
+                            self.sendData(str: self.listButton[TypeButton.forward_right.hashValue].pressText)
+                        }   else { //front only
+                            if ( self.currentTarget != nil){
+                                self.changeStatus(imgView: self.currentTarget!, status: false)
+                            }
+                            self.changeStatus(imgView: self.listDirection[0], status: true)
+                            self.sendData(str: self.listButton[TypeButton.forward.hashValue].pressText)
+                        }
+                    }
+                    else if ( (x > 0.0 + EPSILON) && ( x < 0.5 - EPSILON)) { // BACK
+                        if (( y < 0.0 - EPSILON) && (y > -0.5 - EPSILON) ) { //Left
+                            if ( self.currentTarget != nil){
+                                self.changeStatus(imgView: self.currentTarget!, status: false)
+                            }
+                            self.changeStatus(imgView: self.listDirection[5], status: true)
+                            self.sendData(str: self.listButton[TypeButton.backLeft.hashValue].pressText)
+                        } else if ( ( y > 0.0 + EPSILON) && ( y < 0.5 - EPSILON)) { // RIGHT
+                            if ( self.currentTarget != nil){
+                                self.changeStatus(imgView: self.currentTarget!, status: false)
+                            }
+                            self.changeStatus(imgView: self.listDirection[3], status: true)
+                            self.sendData(str: self.listButton[TypeButton.backRight.hashValue].pressText)
+                        } else { //Back Only
+                            if ( self.currentTarget != nil){
+                                self.changeStatus(imgView: self.currentTarget!, status: false)
+                            }
+                            self.changeStatus(imgView: self.listDirection[4], status: true)
+                            self.sendData(str: self.listButton[TypeButton.back.hashValue].pressText)
+                        }
+                    } else {
+                        if (( y < 0.0 - EPSILON) && (y > -0.5 - EPSILON) ) { //Left only
+                            if ( self.currentTarget != nil){
+                                self.changeStatus(imgView: self.currentTarget!, status: false)
+                            }
+                            self.changeStatus(imgView: self.listDirection[6], status: true)
+                            self.sendData(str: self.listButton[TypeButton.left.hashValue].pressText)
+                        } else if ( ( y > 0.0 + EPSILON) && ( y < 0.5 - EPSILON)) { // RIGHT only
+                            if ( self.currentTarget != nil){
+                                self.changeStatus(imgView: self.currentTarget!, status: false)
+                            }
+                            self.changeStatus(imgView: self.listDirection[2], status: true)
+                            self.sendData(str: self.listButton[TypeButton.right.hashValue].pressText)
+                        } else { //Center Only
+                            if ( self.currentTarget != nil){
+                                self.changeStatus(imgView: self.currentTarget!, status: false)
+                            }
+                            self.sendData(str: self.listButton[TypeButton.forward.hashValue].releaseText)
+                        }
+                    }
+                }
+                /*
+                let gravity = devicemotion?.gravity
+                if (gravity != nil){
+                    let rotation = atan2((gravity?.x) ?? 0.0, (gravity?.y) ?? 0) + Double.pi / 2
+                    if (gravity.z > -0.95) {
+                        if ((rotation > 0.1) && (rotation < 1)) {
+                            let str = self.listButton[TypeButton.rotateLeft.hashValue].pressText
+                            self.sendData(str: str)
+                        } else if ( (rotation > -1) && (rotation < -0.1)) {
+                            let str = self.listButton[TypeButton.rotateRight.hashValue].pressText
+                            self.sendData(str: str)
+                        }
+                    }
+                }
+ */
+            })
+        } else {
+            NSLog("Detect is note available")
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -154,11 +279,6 @@ class UIController: UIViewController {
             item.tag = i
             i = i + 1
         }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        self.seperateData()
-        self.setUpData()
     }
     
     func seperateData(){
@@ -353,6 +473,8 @@ class UIController: UIViewController {
     }
     
     @IBAction func settingCarTouchUp(_ sender : UIButton){
+        self.sendData(str: self.listButton[TypeButton.forward_left.hashValue].releaseText)
+        self.motionManager.stopDeviceMotionUpdates()
         let vc = PopUpSetUpViewController(nibName: "PopUpSetUpViewController", bundle: nil)
         let stpopup = STPopupController(rootViewController: vc)
         stpopup.present(in: self)
