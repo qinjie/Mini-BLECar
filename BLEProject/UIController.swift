@@ -13,6 +13,12 @@ import SwiftyJSON
 import CoreMotion
 import CoreLocation
 
+/*
+7   0   1
+6       2
+5   4   3
+ */
+
 enum TypeButton {
     case connect
     case disconnect
@@ -56,8 +62,10 @@ class ButtonData2 : NSObject {
 
 class UIController: UIViewController {
     let UPDATE_INTERVAL = 0.2
-    let EPSILON = 0.1
+    let EPSILON = 20.0
+    let EPSILONFORWARD = 0.1
     var motionManager : CMMotionManager!
+    var initialAttitude : CMAttitude?
     
     @IBOutlet weak var slider : DesignableSlider!
     @IBOutlet weak var btnUp : UIButton!
@@ -120,21 +128,121 @@ class UIController: UIViewController {
     }
     
     func readAcceleratorData(){
+        
         if ( self.motionManager.isDeviceMotionAvailable == true) {
+            
             self.motionManager.startDeviceMotionUpdates(to: OperationQueue.main, withHandler: { (devicemotion, error) in
-                let attitude = devicemotion?.attitude
+                if ( self.initialAttitude == nil){
+                    self.initialAttitude = self.motionManager.deviceMotion!.attitude
+                }
+                
+                let attitude = devicemotion?.gravity
+            
                 if (attitude != nil) {
-                    let x = -attitude!.quaternion.y
-                    let y = attitude!.quaternion.x
+                    let x = attitude!.x
+                    let y = attitude!.y
+                    let z = attitude!.z
+                    
+                    let angle = (atan2(x, y)) * Double(180) / Double.pi
+                    
+//                    NSLog(String.init(format: "Angle(x,y):  %.2f", angle))
+                    
+                    let angle2 = (atan2(x, z)) * Double(180) / Double.pi
+                    
+                    NSLog(String.init(format: "Angle(x,z) : %.2f", angle2))
+                    
+                    let angle3 = (atan2(y, z)) * Double(180) / Double.pi
+                    
+//                    NSLog(String.init(format: "Angle(y,z) : %.2f", angle3))
+                    
                     let EPSILON = self.EPSILON
-                    if (( x < 0.0 - EPSILON) && ( x > -0.5 - EPSILON)) { // Front
-                        if (( y < 0.0 - EPSILON) && (y > -0.5 - EPSILON) ) { //Left
+                    let EPSILONFORWARD = self.EPSILONFORWARD
+                    
+                    if (( angle2 < -95 - EPSILON) && (angle2 > -180 + EPSILON)) {
+                        //front
+                        
+                        if ((angle > -90 + EPSILON) && (angle < 0 - EPSILON)){//left
+                            if (self.currentTarget != nil){
+                                self.changeStatus(imgView: self.currentTarget!, status: false)
+                            }
+                            self.changeStatus(imgView: self.listDirection[7], status: true)
+                            self.sendData(str: self.listButton[TypeButton.left.hashValue].pressText)
+                        } else if ((angle < -90 - EPSILON) && (angle > -180 + EPSILON)){//right
+                            if (self.currentTarget != nil){
+                                self.changeStatus(imgView: self.currentTarget!, status: false)
+                            }
+                            self.changeStatus(imgView: self.listDirection[1], status: true)
+                            self.sendData(str: self.listButton[TypeButton.right.hashValue].pressText)
+                        } else {
+                            if (self.currentTarget != nil){
+                                self.changeStatus(imgView: self.currentTarget!, status: false)
+                            }
+                            self.changeStatus(imgView: self.listDirection[0], status: true)
+                            self.sendData(str: self.listButton[TypeButton.forward.hashValue].pressText)
+                        }
+
+                        
+                    } else if ( (angle2 < -45 + EPSILON) && (angle2 > -95 + EPSILONFORWARD)){
+                        
+                        //BACK
+                        if ((angle > -90 + EPSILON) && (angle < 0 - EPSILON)){//left
+                            if (self.currentTarget != nil){
+                                self.changeStatus(imgView: self.currentTarget!, status: false)
+                            }
+                            self.changeStatus(imgView: self.listDirection[5], status: true)
+                            self.sendData(str: self.listButton[TypeButton.backLeft.hashValue].pressText)
+                        } else if ((angle < -90 - EPSILON) && (angle > -180 + EPSILON)){//right
+                            if (self.currentTarget != nil){
+                                self.changeStatus(imgView: self.currentTarget!, status: false)
+                            }
+                            self.changeStatus(imgView: self.listDirection[3], status: true)
+                            self.sendData(str: self.listButton[TypeButton.backRight.hashValue].pressText)
+                        } else { //back only
+                            if (self.currentTarget != nil){
+                                self.changeStatus(imgView: self.currentTarget!, status: false)
+                            }
+                            self.changeStatus(imgView: self.listDirection[4], status: true)
+                            self.sendData(str: self.listButton[TypeButton.back.hashValue].pressText)
+                        }
+                        
+                    } else {
+                        if ((angle > -90 + EPSILON) && (angle < 0 - EPSILON)){//left
+                            if (self.currentTarget != nil){
+                                self.changeStatus(imgView: self.currentTarget!, status: false)
+                            }
+                            self.changeStatus(imgView: self.listDirection[6], status: true)
+                            self.sendData(str: self.listButton[TypeButton.left.hashValue].pressText)
+                        } else if ((angle < -90 - EPSILON) && (angle > -180 + EPSILON)){//right
+                            if (self.currentTarget != nil){
+                                self.changeStatus(imgView: self.currentTarget!, status: false)
+                            }
+                            self.changeStatus(imgView: self.listDirection[2], status: true)
+                            self.sendData(str: self.listButton[TypeButton.right.hashValue].pressText)
+                        } else { //normal
+                            if (self.currentTarget != nil){
+                                self.changeStatus(imgView: self.currentTarget!, status: false)
+                            }
+                            self.sendData(str: self.listButton[TypeButton.back.hashValue].releaseText)
+                        }
+
+                    }
+                    
+                                       //title
+                    
+                    
+                    
+                    //NSLog(String.init(format: "%.2f  %.2f  %.2f", x,y,z))
+                    
+                    /*
+                    if (( x > 0.25 + EPSILON) && ( x < 0.66 - EPSILON)) { // Front
+                        NSLog("Front")
+                        if (( y > 0.0 - EPSILON) && (y < 0.4 - EPSILON) ) { //Left
                             if ( self.currentTarget != nil){
                                 self.changeStatus(imgView: self.currentTarget!, status: false)
                             }
                             self.changeStatus(imgView: self.listDirection[7], status: true)
                             self.sendData(str: self.listButton[TypeButton.forward_left.hashValue].pressText)
-                        } else if ( ( y > 0.0 + EPSILON) && ( y < 0.5 - EPSILON)) { // RIGHT
+                        } else if ( ( y > 0.0 - EPSILON) && ( y < 0. - EPSILON)) { // RIGHT
                             if ( self.currentTarget != nil){
                                 self.changeStatus(imgView: self.currentTarget!, status: false)
                             }
@@ -148,7 +256,8 @@ class UIController: UIViewController {
                             self.sendData(str: self.listButton[TypeButton.forward.hashValue].pressText)
                         }
                     }
-                    else if ( (x > 0.0 + EPSILON) && ( x < 0.5 - EPSILON)) { // BACK
+                    else if ( (x > 0.66 + EPSILON) && ( x < 0.83 - EPSILON)) { // BACK
+                        NSLog("Back")
                         if (( y < 0.0 - EPSILON) && (y > -0.5 - EPSILON) ) { //Left
                             if ( self.currentTarget != nil){
                                 self.changeStatus(imgView: self.currentTarget!, status: false)
@@ -169,25 +278,32 @@ class UIController: UIViewController {
                             self.sendData(str: self.listButton[TypeButton.back.hashValue].pressText)
                         }
                     } else {
-                        if (( y < 0.0 - EPSILON) && (y > -0.5 - EPSILON) ) { //Left only
-                            if ( self.currentTarget != nil){
-                                self.changeStatus(imgView: self.currentTarget!, status: false)
-                            }
-                            self.changeStatus(imgView: self.listDirection[6], status: true)
-                            self.sendData(str: self.listButton[TypeButton.left.hashValue].pressText)
-                        } else if ( ( y > 0.0 + EPSILON) && ( y < 0.5 - EPSILON)) { // RIGHT only
-                            if ( self.currentTarget != nil){
-                                self.changeStatus(imgView: self.currentTarget!, status: false)
-                            }
-                            self.changeStatus(imgView: self.listDirection[2], status: true)
-                            self.sendData(str: self.listButton[TypeButton.right.hashValue].pressText)
-                        } else { //Center Only
-                            if ( self.currentTarget != nil){
-                                self.changeStatus(imgView: self.currentTarget!, status: false)
-                            }
-                            self.sendData(str: self.listButton[TypeButton.forward.hashValue].releaseText)
+                        if ( self.currentTarget != nil){
+                            self.changeStatus(imgView: self.currentTarget!, status: false)
                         }
+                        self.sendData(str: self.listButton[TypeButton.forward.hashValue].releaseText)
                     }
+ */
+//                    else {
+//                        if (( y < 0.0 - EPSILON) && (y > -0.5 - EPSILON) ) { //Left only
+//                            if ( self.currentTarget != nil){
+//                                self.changeStatus(imgView: self.currentTarget!, status: false)
+//                            }
+//                            self.changeStatus(imgView: self.listDirection[6], status: true)
+//                            self.sendData(str: self.listButton[TypeButton.left.hashValue].pressText)
+//                        } else if ( ( y > 0.0 + EPSILON) && ( y < 0.5 - EPSILON)) { // RIGHT only
+//                            if ( self.currentTarget != nil){
+//                                self.changeStatus(imgView: self.currentTarget!, status: false)
+//                            }
+//                            self.changeStatus(imgView: self.listDirection[2], status: true)
+//                            self.sendData(str: self.listButton[TypeButton.right.hashValue].pressText)
+//                        } else { //Center Only
+//                            if ( self.currentTarget != nil){
+//                                self.changeStatus(imgView: self.currentTarget!, status: false)
+//                            }
+//                            self.sendData(str: self.listButton[TypeButton.forward.hashValue].releaseText)
+//                        }
+//                    }
                 }
                 /*
                 let gravity = devicemotion?.gravity
@@ -205,6 +321,20 @@ class UIController: UIViewController {
                 }
  */
             })
+ /*
+            self.motionManager.startAccelerometerUpdates(to: OperationQueue.current!, withHandler: { (data, error) in
+                let x = data?.acceleration.x
+                let y = data?.acceleration.y
+                let z = data?.acceleration.z
+                
+                
+                let angle = (atan2(x!, y!)) * 180.0 / Double.pi
+                let angle2 = (atan2(x!, z!)) * 180.0 / Double.pi
+                let angle3 = (atan2(y!, z!)) * 180.0 / Double.pi
+                
+                NSLog("Angle(x,y):   %.2f \n Angle(x,z)  : %.2f  \n Angle(y,z) : %.2f ", angle,angle2,angle3)
+            })
+ */
         } else {
             NSLog("Detect is note available")
         }
@@ -428,7 +558,7 @@ class UIController: UIViewController {
     }
     
     func sendData(str : String) {
-        NSLog("Send: \(str)")
+        
         let b = str
         
         let data = b.data(using: String.Encoding.utf8)

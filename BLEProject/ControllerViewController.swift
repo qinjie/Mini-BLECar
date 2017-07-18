@@ -40,33 +40,18 @@ class ControllerViewController: UIViewController {
         
         self.motionManager.startDeviceMotionUpdates()
         self.motionManager.startAccelerometerUpdates()
-        self.motionManager.gyroUpdateInterval = TimeInterval(UPDATE_INTERVAL)
+        //self.motionManager.gyroUpdateInterval = TimeInterval(UPDATE_INTERVAL)
         
-        self.motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { (data, error) in
-            
+        self.motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { (data, erro) in
             let x = data?.acceleration.x
-            let y = data?.acceleration.x
-            let z = data?.acceleration.x
+            let y = data?.acceleration.y
+            let z = data?.acceleration.z
             
-            
-            let a = String.init(format: "x:  %.2f  y:  %2.f   z: %.2f", x!,y!,z!)
+            let angle = atan2(y!, z!)
+            //NSLog("Angle:   \(angle)")
             
         }
         
-        
-/*
-        self.motionManager.startDeviceMotionUpdates(to: OperationQueue.current!) { (data, error) in
-            if let gravity = data?.gravity {
-                let rotation = atan2(-gravity.x, -gravity.y) - Double.pi / 2
-                    NSLog("Rotation   \(rotation)")
-                    if ((rotation > 0.1) && (rotation < 1)) {
-                        NSLog("Left")
-                    } else if ( (rotation > -1) && (rotation < -0.1)) {
-                        NSLog("Right")
-                    }
-            }
-        }
- */
     }
     
     func setForBtn(btn : UIButton) {

@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -772,13 +773,13 @@
     </objects>
     <resources>
         <image name="Center" width="50" height="50"/>
-        <image name="Down" width="50" height="50"/>
-        <image name="DownLeft" width="71" height="71"/>
-        <image name="DownRight" width="71" height="71"/>
-        <image name="Left" width="50" height="50"/>
-        <image name="Right" width="50" height="50"/>
-        <image name="Up" width="50" height="50"/>
-        <image name="UpLeft" width="71" height="71"/>
-        <image name="UpRight" width="71" height="71"/>
+        <image name="Down" width="82" height="82"/>
+        <image name="DownLeft" width="82" height="82"/>
+        <image name="DownRight" width="82" height="82"/>
+        <image name="Left" width="82" height="82"/>
+        <image name="Right" width="82" height="82"/>
+        <image name="Up" width="82" height="82"/>
+        <image name="UpLeft" width="82" height="82"/>
+        <image name="UpRight" width="88" height="70"/>
     </resources>
 </document>
