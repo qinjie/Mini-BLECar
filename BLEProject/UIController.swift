@@ -205,6 +205,18 @@ class UIController: UIViewController {
                 }
  */
             })
+            
+            
+            self.motionManager.gyroUpdateInterval = 1.0
+            self.motionManager.startGyroUpdates(to: OperationQueue.current!, withHandler: { (data, error) in
+                let a = data?.rotationRate.x ?? 0.0
+                let b = data?.rotationRate.y ?? 0.0
+                let c = data?.rotationRate.z ?? 0.0
+                
+                let angle = atan2(b, c) * 180.0 / Double.pi
+                
+                NSLog( String.init(format: "Angle(x,y)   %.2f", angle) )
+            })
         } else {
             NSLog("Detect is note available")
         }
@@ -428,7 +440,7 @@ class UIController: UIViewController {
     }
     
     func sendData(str : String) {
-        NSLog("Send: \(str)")
+        
         let b = str
         
         let data = b.data(using: String.Encoding.utf8)
