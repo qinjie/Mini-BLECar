@@ -216,7 +216,7 @@ class UIController: UIViewController {
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
-        return .landscape
+        return .landscapeRight
     }
     
     @IBAction func pressStart(_ sender : UIButton){
