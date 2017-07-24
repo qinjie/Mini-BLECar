@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		05BBA3EF1F316C8662A13FE8 /* Pods_BLEProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAC291DF4C738EF5F3B82C1 /* Pods_BLEProject.framework */; };
-		361880211F21E3CC00DC5CEF /* AudioRecorderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361880201F21E3CC00DC5CEF /* AudioRecorderManager.swift */; };
 		363A04261F03580700788FE9 /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A04241F03580700788FE9 /* DisplayViewController.swift */; };
 		363A04271F03580700788FE9 /* DisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 363A04251F03580700788FE9 /* DisplayViewController.xib */; };
 		363A042D1F037ADC00788FE9 /* UIColor-Hex-Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363A042A1F037ADC00788FE9 /* UIColor-Hex-Swift.swift */; };
@@ -39,26 +38,18 @@
 		3687660F1EFC9FA6004082DB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3687660E1EFC9FA6004082DB /* BaseViewController.swift */; };
 		368766131EFCA470004082DB /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368766111EFCA470004082DB /* DeviceTableViewCell.swift */; };
 		368766141EFCA470004082DB /* DeviceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368766121EFCA470004082DB /* DeviceTableViewCell.xib */; };
-		368C460D1F21864B008D2CEB /* ListSongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368C460B1F21864B008D2CEB /* ListSongsViewController.swift */; };
-		368C460E1F21864B008D2CEB /* ListSongsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368C460C1F21864B008D2CEB /* ListSongsViewController.xib */; };
-		368C46121F21867F008D2CEB /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368C46101F21867F008D2CEB /* SongTableViewCell.swift */; };
-		368C46131F21867F008D2CEB /* SongTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368C46111F21867F008D2CEB /* SongTableViewCell.xib */; };
 		368C46161F218F71008D2CEB /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 368C46141F218F71008D2CEB /* MediaPlayer.framework */; };
 		368C46171F218F71008D2CEB /* MediaToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 368C46151F218F71008D2CEB /* MediaToolbox.framework */; };
 		368C46191F218F78008D2CEB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 368C46181F218F78008D2CEB /* AudioToolbox.framework */; };
-		368C461D1F21CF0D008D2CEB /* RecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368C461B1F21CF0D008D2CEB /* RecordingViewController.swift */; };
-		368C461E1F21CF0D008D2CEB /* RecordingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 368C461C1F21CF0D008D2CEB /* RecordingViewController.xib */; };
 		368F21131F15B29000730DD7 /* DesignableSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F21121F15B29000730DD7 /* DesignableSlider.swift */; };
 		369309701F2092B300A0D127 /* TypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3693096F1F2092B300A0D127 /* TypeButton.swift */; };
 		36E1C72E1F0CC46E00B84C04 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E1C72D1F0CC46E00B84C04 /* ExternalAccessory.framework */; };
-		36EBE2FF1F25942D002D6F1A /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EBE2FE1F25942D002D6F1A /* AudioPlayerManager.swift */; };
 		36F70DFC1F05F01B006429A2 /* ControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F70DFA1F05F01A006429A2 /* ControllerViewController.swift */; };
 		36F70DFD1F05F01B006429A2 /* ControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F70DFB1F05F01A006429A2 /* ControllerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1F130F43912325E999BFEFED /* Pods-BLEProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLEProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLEProject/Pods-BLEProject.debug.xcconfig"; sourceTree = "<group>"; };
-		361880201F21E3CC00DC5CEF /* AudioRecorderManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorderManager.swift; sourceTree = "<group>"; };
 		363A04241F03580700788FE9 /* DisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 		363A04251F03580700788FE9 /* DisplayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisplayViewController.xib; sourceTree = "<group>"; };
 		363A042A1F037ADC00788FE9 /* UIColor-Hex-Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Hex-Swift.swift"; sourceTree = "<group>"; };
@@ -91,19 +82,12 @@
 		3687660E1EFC9FA6004082DB /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		368766111EFCA470004082DB /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceTableViewCell.swift; path = Controller/ScanningViewController/CellDevice/DeviceTableViewCell.swift; sourceTree = "<group>"; };
 		368766121EFCA470004082DB /* DeviceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DeviceTableViewCell.xib; path = Controller/ScanningViewController/CellDevice/DeviceTableViewCell.xib; sourceTree = "<group>"; };
-		368C460B1F21864B008D2CEB /* ListSongsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListSongsViewController.swift; sourceTree = "<group>"; };
-		368C460C1F21864B008D2CEB /* ListSongsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListSongsViewController.xib; sourceTree = "<group>"; };
-		368C46101F21867F008D2CEB /* SongTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
-		368C46111F21867F008D2CEB /* SongTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongTableViewCell.xib; sourceTree = "<group>"; };
 		368C46141F218F71008D2CEB /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		368C46151F218F71008D2CEB /* MediaToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaToolbox.framework; path = System/Library/Frameworks/MediaToolbox.framework; sourceTree = SDKROOT; };
 		368C46181F218F78008D2CEB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		368C461B1F21CF0D008D2CEB /* RecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingViewController.swift; sourceTree = "<group>"; };
-		368C461C1F21CF0D008D2CEB /* RecordingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecordingViewController.xib; sourceTree = "<group>"; };
 		368F21121F15B29000730DD7 /* DesignableSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableSlider.swift; sourceTree = "<group>"; };
 		3693096F1F2092B300A0D127 /* TypeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeButton.swift; sourceTree = "<group>"; };
 		36E1C72D1F0CC46E00B84C04 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
-		36EBE2FE1F25942D002D6F1A /* AudioPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
 		36F70DFA1F05F01A006429A2 /* ControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerViewController.swift; sourceTree = "<group>"; };
 		36F70DFB1F05F01A006429A2 /* ControllerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ControllerViewController.xib; sourceTree = "<group>"; };
 		7EAC291DF4C738EF5F3B82C1 /* Pods_BLEProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLEProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,14 +120,6 @@
 				7EAC291DF4C738EF5F3B82C1 /* Pods_BLEProject.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		3618801F1F21E3B700DC5CEF /* AudioRecorderManager */ = {
-			isa = PBXGroup;
-			children = (
-				361880201F21E3CC00DC5CEF /* AudioRecorderManager.swift */,
-			);
-			name = AudioRecorderManager;
 			sourceTree = "<group>";
 		};
 		363A04231F0357F500788FE9 /* DisplayVC */ = {
@@ -247,8 +223,6 @@
 		368766071EFC9EEC004082DB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				368C461A1F21CEF5008D2CEB /* RecordViewController */,
-				369309711F20A6E200A0D127 /* ListSongController */,
 				3663C1161F0B3B5E00E5F76E /* ControlButtonVC */,
 				36F70DF91F05F006006429A2 /* ControllerVC */,
 				363A04231F0357F500788FE9 /* DisplayVC */,
@@ -285,36 +259,6 @@
 				368766121EFCA470004082DB /* DeviceTableViewCell.xib */,
 			);
 			name = CellDevice;
-			sourceTree = "<group>";
-		};
-		368C460F1F21866E008D2CEB /* SongCell */ = {
-			isa = PBXGroup;
-			children = (
-				368C46101F21867F008D2CEB /* SongTableViewCell.swift */,
-				368C46111F21867F008D2CEB /* SongTableViewCell.xib */,
-			);
-			name = SongCell;
-			sourceTree = "<group>";
-		};
-		368C461A1F21CEF5008D2CEB /* RecordViewController */ = {
-			isa = PBXGroup;
-			children = (
-				3618801F1F21E3B700DC5CEF /* AudioRecorderManager */,
-				368C461B1F21CF0D008D2CEB /* RecordingViewController.swift */,
-				36EBE2FE1F25942D002D6F1A /* AudioPlayerManager.swift */,
-				368C461C1F21CF0D008D2CEB /* RecordingViewController.xib */,
-			);
-			name = RecordViewController;
-			sourceTree = "<group>";
-		};
-		369309711F20A6E200A0D127 /* ListSongController */ = {
-			isa = PBXGroup;
-			children = (
-				368C460F1F21866E008D2CEB /* SongCell */,
-				368C460B1F21864B008D2CEB /* ListSongsViewController.swift */,
-				368C460C1F21864B008D2CEB /* ListSongsViewController.xib */,
-			);
-			name = ListSongController;
 			sourceTree = "<group>";
 		};
 		36F70DF91F05F006006429A2 /* ControllerVC */ = {
@@ -398,7 +342,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				368C46131F21867F008D2CEB /* SongTableViewCell.xib in Resources */,
 				363B5ABC1F16FA0700F30D3F /* PopUpSetUpViewController.xib in Resources */,
 				36F70DFD1F05F01B006429A2 /* ControllerViewController.xib in Resources */,
 				368766001EFC9E77004082DB /* LaunchScreen.storyboard in Resources */,
@@ -408,9 +351,7 @@
 				3663C1151F0B212800E5F76E /* MainViewController.xib in Resources */,
 				3663C11F1F0B42A300E5F76E /* PopUpViewController.xib in Resources */,
 				364A97A91F1458DA0053D948 /* UIController.xib in Resources */,
-				368C460E1F21864B008D2CEB /* ListSongsViewController.xib in Resources */,
 				368765FD1EFC9E77004082DB /* Assets.xcassets in Resources */,
-				368C461E1F21CF0D008D2CEB /* RecordingViewController.xib in Resources */,
 				368765FB1EFC9E77004082DB /* Main.storyboard in Resources */,
 				3687660C1EFC9F18004082DB /* ScanningViewController.xib in Resources */,
 				363B5AC01F16FA9100F30D3F /* SettingTableViewCell.xib in Resources */,
@@ -476,10 +417,8 @@
 				368766131EFCA470004082DB /* DeviceTableViewCell.swift in Sources */,
 				368765F81EFC9E77004082DB /* ViewController.swift in Sources */,
 				3687660F1EFC9FA6004082DB /* BaseViewController.swift in Sources */,
-				368C460D1F21864B008D2CEB /* ListSongsViewController.swift in Sources */,
 				3663C1141F0B212800E5F76E /* MainViewController.swift in Sources */,
 				363A042D1F037ADC00788FE9 /* UIColor-Hex-Swift.swift in Sources */,
-				36EBE2FF1F25942D002D6F1A /* AudioPlayerManager.swift in Sources */,
 				3640D1991F023667001415F0 /* TestingViewController.swift in Sources */,
 				3687660B1EFC9F18004082DB /* ScanningViewController.swift in Sources */,
 				363A042E1F037ADC00788FE9 /* UIView+IBInspectable.swift in Sources */,
@@ -488,15 +427,12 @@
 				3663C11E1F0B42A300E5F76E /* PopUpViewController.swift in Sources */,
 				36F70DFC1F05F01B006429A2 /* ControllerViewController.swift in Sources */,
 				363B5ABF1F16FA9100F30D3F /* SettingTableViewCell.swift in Sources */,
-				368C46121F21867F008D2CEB /* SongTableViewCell.swift in Sources */,
 				369309701F2092B300A0D127 /* TypeButton.swift in Sources */,
-				361880211F21E3CC00DC5CEF /* AudioRecorderManager.swift in Sources */,
 				363A042F1F037ADC00788FE9 /* UIView+IRAnimation.swift in Sources */,
 				363B5ABB1F16FA0700F30D3F /* PopUpSetUpViewController.swift in Sources */,
 				368765F61EFC9E77004082DB /* AppDelegate.swift in Sources */,
 				3663C1211F0B468900E5F76E /* TmpValue.swift in Sources */,
 				3663C1191F0B3B7000E5F76E /* ControllButtonViewController.swift in Sources */,
-				368C461D1F21CF0D008D2CEB /* RecordingViewController.swift in Sources */,
 				364A97AB1F1462CB0053D948 /* UIController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

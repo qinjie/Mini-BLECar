@@ -38,7 +38,6 @@ enum TypeButton {
     case speed8
     case speed9
     case speedMax
-    case rotateLeft
-    case rotateRight
+    case stopAll
 }
 

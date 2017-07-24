@@ -155,7 +155,7 @@ class UIController: UIViewController {
                             if ( self.currentTarget != nil){
                                 self.changeStatus(imgView: self.currentTarget!, status: false)
                             }
-                            self.sendData(str: self.listButton[TypeButton.forward.hashValue].releaseText)
+                            self.sendData(str: self.listButton[TypeButton.stopAll.hashValue].pressText)
                         }
                     }
                 }
@@ -419,7 +419,8 @@ class UIController: UIViewController {
 
     @IBAction func close(){
         self.dismiss(animated: true) { 
-            
+            self.sendData(str: self.listButton[TypeButton.stopAll.hashValue].pressText)
+            self.sendData(str: self.listButton[TypeButton.disconnect.hashValue].pressText)
         }
     }
     
@@ -469,7 +470,7 @@ class UIController: UIViewController {
     }
     
     @IBAction func settingCarTouchUp(_ sender : UIButton){
-        self.sendData(str: self.listButton[TypeButton.forward_left.hashValue].releaseText)
+        self.sendData(str: self.listButton[TypeButton.stopAll.hashValue].releaseText)
         self.motionManager.stopDeviceMotionUpdates()
         self.motionManager.stopGyroUpdates()
         let vc = PopUpSetUpViewController(nibName: "PopUpSetUpViewController", bundle: nil)
