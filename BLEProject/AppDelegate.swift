@@ -26,8 +26,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let uic = UIController(nibName: "UIController", bundle: nil)
         
         let controlVC = ControllerViewController(nibName: "ControllerViewController", bundle: nil)
+        
+        let listSongsVC = ListSongsViewController(nibName: "ListSongsViewController", bundle: nil)
         let nav = UINavigationController(rootViewController: vc)
-        self.window?.rootViewController = nav
+        
+        let recordVC = RecordingViewController(nibName: "RecordingViewController", bundle: nil)
+        
+        let nav2 = UINavigationController(rootViewController: listSongsVC)
+        self.window?.rootViewController = uic
         self.window?.makeKeyAndVisible()
         
         return true
@@ -46,6 +52,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.listData.removeAll()
         self.listData.append(DataText(title: "Connect", pressText: "+CONN", releaseText: "", type: 1))
         self.listData.append(DataText(title: "Disconnect", pressText: "+DISC", releaseText: "", type: 1))
+        //left
+        
+        self.listData.append(DataText(title: "Shake Left", pressText: "-", releaseText: "", type: 1))
+        
+        self.listData.append(DataText(title: "Shake Right", pressText: "+", releaseText: "", type: 1))
+        //rigt
         self.listData.append(DataText(title: "Forward", pressText: "F", releaseText: "S"))
         self.listData.append(DataText(title: "Back", pressText: "B", releaseText: "S"))
         self.listData.append(DataText(title: "Left", pressText: "L", releaseText: "S"))

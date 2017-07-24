@@ -13,38 +13,6 @@ import SwiftyJSON
 import CoreMotion
 import CoreLocation
 
-enum TypeButton {
-    case connect
-    case disconnect
-    case forward
-    case back
-    case left
-    case right
-    case forward_left
-    case forward_right
-    case backLeft
-    case backRight
-    case frontLightOn
-    case frontLightOff
-    case backLightOn
-    case backLightOff
-    case hornOn
-    case hornOff
-    case speed0
-    case speed1
-    case speed2
-    case speed3
-    case speed4
-    case speed5
-    case speed6
-    case speed7
-    case speed8
-    case speed9
-    case speedMax
-    case rotateLeft
-    case rotateRight
-}
-
 class ButtonData2 : NSObject {
     var pressText : String
     var releaseText : String
@@ -56,7 +24,7 @@ class ButtonData2 : NSObject {
 
 class UIController: UIViewController {
     let UPDATE_INTERVAL = 0.2
-    let EPSILON = 0.1
+    let EPSILON = 0.2
     var motionManager : CMMotionManager!
     
     @IBOutlet weak var slider : DesignableSlider!
@@ -110,6 +78,7 @@ class UIController: UIViewController {
     func configure(){
         if ( self.typeControl == .gesture){
             self.motionManager.stopDeviceMotionUpdates()
+            self.motionManager.stopGyroUpdates()
             self.view1.isHidden = false
             self.view2.isHidden = false
         } else {
@@ -134,7 +103,7 @@ class UIController: UIViewController {
                             }
                             self.changeStatus(imgView: self.listDirection[7], status: true)
                             self.sendData(str: self.listButton[TypeButton.forward_left.hashValue].pressText)
-                        } else if ( ( y > 0.0 + EPSILON) && ( y < 0.5 - EPSILON)) { // RIGHT
+                        } else if ( ( y > 0.0 + EPSILON) && ( y < 0.5 + EPSILON)) { // RIGHT
                             if ( self.currentTarget != nil){
                                 self.changeStatus(imgView: self.currentTarget!, status: false)
                             }
@@ -148,14 +117,15 @@ class UIController: UIViewController {
                             self.sendData(str: self.listButton[TypeButton.forward.hashValue].pressText)
                         }
                     }
-                    else if ( (x > 0.0 + EPSILON) && ( x < 0.5 - EPSILON)) { // BACK
+                    else if ( (x > 0.0 + EPSILON) && ( x < 0.5 + EPSILON)) { // BACK
+                        NSLog(String.init(format: "%.2f", x))
                         if (( y < 0.0 - EPSILON) && (y > -0.5 - EPSILON) ) { //Left
                             if ( self.currentTarget != nil){
                                 self.changeStatus(imgView: self.currentTarget!, status: false)
                             }
                             self.changeStatus(imgView: self.listDirection[5], status: true)
                             self.sendData(str: self.listButton[TypeButton.backLeft.hashValue].pressText)
-                        } else if ( ( y > 0.0 + EPSILON) && ( y < 0.5 - EPSILON)) { // RIGHT
+                        } else if ( ( y > 0.0 + EPSILON) && ( y < 0.5 + EPSILON)) { // RIGHT
                             if ( self.currentTarget != nil){
                                 self.changeStatus(imgView: self.currentTarget!, status: false)
                             }
@@ -175,7 +145,7 @@ class UIController: UIViewController {
                             }
                             self.changeStatus(imgView: self.listDirection[6], status: true)
                             self.sendData(str: self.listButton[TypeButton.left.hashValue].pressText)
-                        } else if ( ( y > 0.0 + EPSILON) && ( y < 0.5 - EPSILON)) { // RIGHT only
+                        } else if ( ( y > 0.0 + EPSILON) && ( y < 0.5 + EPSILON)) { // RIGHT only
                             if ( self.currentTarget != nil){
                                 self.changeStatus(imgView: self.currentTarget!, status: false)
                             }
@@ -205,6 +175,32 @@ class UIController: UIViewController {
                 }
  */
             })
+            
+            self.motionManager.startGyroUpdates(to: OperationQueue.current!) { (data, error) in
+                let x = data?.rotationRate.x ?? 0.0
+                let y = data?.rotationRate.y ?? 0.0
+                let z = data?.rotationRate.z ?? 0.0
+                
+                let sum = sqrt(pow(x, 2) + pow(y, 2) + pow(z, 2))
+                
+                if ( sum > 8) {
+                    if ( z < -5) {
+                        //right
+                        self.sendData(str: self.listButton[TypeButton.shakeRight.hashValue].pressText)
+                    } else if (z > 5) {
+                        //Left
+                        self.sendData(str: self.listButton[TypeButton.shakeLeft.hashValue].pressText)
+                } else {
+                        
+                    }
+                } else {
+                    //                if (self.currentTarget != nil){
+                    //                    self.changeStatus(imgView: self.currentTarget!, status: false)
+                    //                }
+                    //                self.sendData(str:self.listData[TypeButton.forward.hashValue].releaseText)
+                }
+            }
+
         } else {
             NSLog("Detect is note available")
         }
@@ -475,6 +471,7 @@ class UIController: UIViewController {
     @IBAction func settingCarTouchUp(_ sender : UIButton){
         self.sendData(str: self.listButton[TypeButton.forward_left.hashValue].releaseText)
         self.motionManager.stopDeviceMotionUpdates()
+        self.motionManager.stopGyroUpdates()
         let vc = PopUpSetUpViewController(nibName: "PopUpSetUpViewController", bundle: nil)
         let stpopup = STPopupController(rootViewController: vc)
         stpopup.present(in: self)
