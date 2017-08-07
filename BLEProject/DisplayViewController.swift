@@ -78,7 +78,6 @@ class DisplayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.test()
         
         self.navigationItem.title = "HM-10"
         //set up BLE
@@ -260,6 +259,7 @@ extension DisplayViewController : CBPeripheralDelegate {
     
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
         for service in peripheral.services! {
+            //NSLog("\(service.uuid.uuidString)")
             let thisService = service as CBService
             if (thisService.uuid.uuidString.lowercased().contains(SeriveDefine.Service.lowercased())){
                 peripheral.discoverCharacteristics(nil, for: thisService)
@@ -276,6 +276,7 @@ extension DisplayViewController : CBPeripheralDelegate {
         }
         
         for characteristic in service.characteristics! {
+            NSLog("UUID:  \(characteristic.uuid.uuidString)")
             if (characteristic.uuid.uuidString.lowercased().contains(CharacterisTicDefine.ffe1.lowercased())){
                 NSLog("Notify Cener")
                 self.characterictist = characteristic
@@ -308,8 +309,9 @@ extension DisplayViewController : CBPeripheralDelegate {
                 tmp.append(c1)
                 if ( i % 4 == 3) {
                     tmpResult = tmpResult + " " + tmp
-                    let a = UInt16.init(tmp, radix: 16)
-                    let cg : CGFloat = CGFloat(a!) / CGFloat(65535)
+                    let a = Int16(truncatingBitPattern: strtoul(tmp, nil, 16))
+                    
+                    let cg : CGFloat = (CGFloat(a) + CGFloat(32767)) / CGFloat(65535)
                     
                     if ( i == 27) {
                         let x = Int16(truncatingBitPattern: strtoul(tmp, nil, 16))

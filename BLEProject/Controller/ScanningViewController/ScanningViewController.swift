@@ -16,7 +16,7 @@ struct SeriveDefine {
     static let Service = "FFF0"
 }
 struct CharacterisTicDefine {
-    static let ffe1 = "FFF1"
+    static let ffe1 = "FFE1"
 }
 
 class Peripheral {
@@ -165,14 +165,14 @@ extension ScanningViewController : UITableViewDataSource, UITableViewDelegate {
 //        self.navigationController?.pushViewController(testVC, animated: true)
 //        return
 //---------------------------------------------------------------------------------------------------
-        /*
+        
         let displayVC = DisplayViewController(nibName: "DisplayViewController", bundle: nil)
         displayVC.centralManager = self.centralManager
         displayVC.connectingPeripheral = peripheral        
         self.present(displayVC, animated: true) { 
             
         }
- */
+ 
         /*
         let controlBtnVC = ControllButtonViewController(nibName: "ControllButtonViewController", bundle: nil)
         controlBtnVC.centralManager = self.centralManager
@@ -181,7 +181,7 @@ extension ScanningViewController : UITableViewDataSource, UITableViewDelegate {
             
         }
  */
-        
+        return
         let uic = UIController(nibName: "UIController", bundle: nil)
         uic.centralManager = self.centralManager
         uic.connectingPeripheral = peripheral
