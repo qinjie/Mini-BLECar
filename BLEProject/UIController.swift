@@ -429,8 +429,8 @@ class UIController: UIViewController {
         let b = str
         
         let data = b.data(using: String.Encoding.utf8)
-        if (data != nil){
-            self.connectingPeripheral?.writeValue(data!, for: self.characterictist!, type: CBCharacteristicWriteType.withoutResponse)
+        if ((data != nil) && (self.characterictist != nil)){
+            self.connectingPeripheral?.writeValue(data!, for: self.characterictist!, type: CBCharacteristicWriteType.withResponse)
         }
     }
     
@@ -521,6 +521,7 @@ extension UIController : CBPeripheralDelegate {
             let thisService = service as CBService
             if (thisService.uuid.uuidString.lowercased().contains(SeriveDefine.Service.lowercased())){
                 peripheral.discoverCharacteristics(nil, for: thisService)
+                break
             }
         }
     }

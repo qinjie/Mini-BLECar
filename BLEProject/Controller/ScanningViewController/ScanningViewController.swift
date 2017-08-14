@@ -51,6 +51,16 @@ class ScanningViewController: BaseViewController {
         self.centralManager = CBCentralManager(delegate: self, queue: nil)
         tableView.register(UINib.init(nibName: "DeviceTableViewCell", bundle: nil), forCellReuseIdentifier: "DeviceTableViewCell")
         tableView.tableFooterView = UIView.init(frame: CGRect.zero)
+        
+        self.navigationController?.navigationBar.barTintColor = UIColor.init(rgba: "#1565C0")
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.isTranslucent = false
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [
+            NSForegroundColorAttributeName : UIColor.white
+        ]
+        
+        self.title = "Scanner"
 
         // Do any additional setup after loading the view.
     }
@@ -266,8 +276,6 @@ extension ScanningViewController : CBPeripheralDelegate {
             let a = String.init(data: characteristic.value!, encoding: String.Encoding.utf8)
             NSLog("\(a)")
         }
-        
-        
     }
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateNotificationStateFor characteristic: CBCharacteristic, error: Error?) {
