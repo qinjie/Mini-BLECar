@@ -314,7 +314,7 @@
 				TargetAttributes = {
 					368765F11EFC9E77004082DB = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 77G8PUN44T;
+						DevelopmentTeam = EH5BAL5EWL;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -559,13 +559,14 @@
 			baseConfigurationReference = 1F130F43912325E999BFEFED /* Pods-BLEProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 77G8PUN44T;
+				DEVELOPMENT_TEAM = EH5BAL5EWL;
 				INFOPLIST_FILE = BLEProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.anhtuan.BLEProject;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.np.BLEProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -574,13 +575,14 @@
 			baseConfigurationReference = CA42912CB5FE2CB9D8D061B8 /* Pods-BLEProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 77G8PUN44T;
+				DEVELOPMENT_TEAM = EH5BAL5EWL;
 				INFOPLIST_FILE = BLEProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.anhtuan.BLEProject;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.np.BLEProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

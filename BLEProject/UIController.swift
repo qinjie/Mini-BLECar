@@ -327,9 +327,14 @@ class UIController: UIViewController {
         self.btnRight.addTarget(self, action: #selector(UIController.eventHold(_:)), for: UIControlEvents.touchDown)
         
         self.btnUp.addTarget(self, action: #selector(UIController.eventTouchUp(_:)), for: UIControlEvents.touchUpInside)
+        self.btnUp.addTarget(self, action: #selector(UIController.eventTouchUp(_:)), for: UIControlEvents.touchUpOutside)
+        
         self.btnDown.addTarget(self, action: #selector(UIController.eventTouchUp(_:)), for: UIControlEvents.touchUpInside)
+        self.btnDown.addTarget(self, action: #selector(UIController.eventTouchUp(_:)), for: UIControlEvents.touchUpOutside)
         self.btnLeft.addTarget(self, action: #selector(UIController.eventTouchUp(_:)), for: UIControlEvents.touchUpInside)
+        self.btnLeft.addTarget(self, action: #selector(UIController.eventTouchUp(_:)), for: UIControlEvents.touchUpOutside)
         self.btnRight.addTarget(self, action: #selector(UIController.eventTouchUp(_:)), for: UIControlEvents.touchUpInside)
+        self.btnRight.addTarget(self, action: #selector(UIController.eventTouchUp(_:)), for: UIControlEvents.touchUpOutside)
     }
     
     func changeStatus(imgView : UIImageView, status : Bool){
@@ -477,6 +482,13 @@ class UIController: UIViewController {
         let stpopup = STPopupController(rootViewController: vc)
         stpopup.present(in: self)
     }
+    
+    func stopDevicemotion(){
+        self.motionManager.stopGyroUpdates()
+        self.motionManager.stopDeviceMotionUpdates()
+        self.motionManager.stopMagnetometerUpdates()
+        self.motionManager.stopAccelerometerUpdates()
+    }
 }
 
 extension UIController : CBCentralManagerDelegate {
@@ -486,6 +498,7 @@ extension UIController : CBCentralManagerDelegate {
             
             let alertAction = UIAlertAction(title: "OK", style: .default) { (action) in
                 self.dismiss(animated: true, completion: nil)
+                self.stopDevicemotion()
                 self.centralManager?.cancelPeripheralConnection(self.connectingPeripheral!)
             }
             alertVC.addAction(alertAction)
@@ -501,11 +514,32 @@ extension UIController : CBCentralManagerDelegate {
         if (central.retrieveConnectedPeripherals(withServices: [uuid])).count == 0 {
             
             let alertVC = UIAlertController(title: "Warning", message: "Disconnected", preferredStyle: UIAlertControllerStyle.alert)
+            
+            
+            let alertAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                self.dismiss(animated: true, completion: nil)
+                self.centralManager?.cancelPeripheralConnection(self.connectingPeripheral!)
+                self.stopDevicemotion()
+            }
+            alertVC.addAction(alertAction)
+            self.show(alertVC, sender: nil)
+            
             self.show(alertVC, sender: nil)
         }
     }
     func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
-        
+        if (error != nil) {
+            let alertVC = UIAlertController(title: "Warning", message: "\(error!.localizedDescription)", preferredStyle: UIAlertControllerStyle.alert)
+            
+            let alertAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                self.stopDevicemotion()
+                self.dismiss(animated: true, completion: nil)
+                self.centralManager?.cancelPeripheralConnection(self.connectingPeripheral!)
+            }
+            alertVC.addAction(alertAction)
+            self.show(alertVC, sender: nil)
+        }
+
     }
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         
