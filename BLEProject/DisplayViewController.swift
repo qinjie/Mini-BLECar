@@ -132,7 +132,7 @@ class DisplayViewController: UIViewController {
         var a : [Int] = []
         let b = "ABC"
         let data = b.data(using: String.Encoding.ascii)
-        self.connectingPeripheral?.writeValue(data!, for: self.characterictist!, type: CBCharacteristicWriteType.withoutResponse)
+        self.connectingPeripheral?.writeValue(data!, for: self.characterictist!, type: CBCharacteristicWriteType.withResponse)
     }
     
     @IBAction func closeTouchUp(_ sender : UIButton){

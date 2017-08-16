@@ -20,14 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.initDataDefault()
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let vc = ScanningViewController(nibName: "ScanningViewController", bundle: nil)
-        let vc2 = DisplayViewController(nibName: "DisplayViewController", bundle: nil)
-        let main = MainViewController(nibName: "MainViewController", bundle: nil)
-        let controlBtnVC = ControllButtonViewController(nibName: "ControllButtonViewController", bundle: nil)
-        let uic = UIController(nibName: "UIController", bundle: nil)
         
-        let controlVC = ControllerViewController(nibName: "ControllerViewController", bundle: nil)
         let nav = UINavigationController(rootViewController: vc)
-        self.window?.rootViewController = uic
+
+        self.window?.rootViewController = nav
+
         self.window?.makeKeyAndVisible()
         
         return true
@@ -46,6 +43,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.listData.removeAll()
         self.listData.append(DataText(title: "Connect", pressText: "+CONN", releaseText: "", type: 1))
         self.listData.append(DataText(title: "Disconnect", pressText: "+DISC", releaseText: "", type: 1))
+        //left
+        
+        self.listData.append(DataText(title: "Shake Left", pressText: "-", releaseText: "", type: 1))
+        
+        self.listData.append(DataText(title: "Shake Right", pressText: "+", releaseText: "", type: 1))
+        //rigt
         self.listData.append(DataText(title: "Forward", pressText: "F", releaseText: "S"))
         self.listData.append(DataText(title: "Back", pressText: "B", releaseText: "S"))
         self.listData.append(DataText(title: "Left", pressText: "L", releaseText: "S"))
@@ -71,8 +74,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.listData.append(DataText(title: "Speed 80", pressText: "8", releaseText: "", type: 1))
         self.listData.append(DataText(title: "Speed 90", pressText: "9", releaseText: "", type: 1))
         self.listData.append(DataText(title: "Speed 100", pressText: "q", releaseText: "", type: 1))
-        self.listData.append(DataText(title: "Rotate Left", pressText: "q", releaseText: "", type: 1))
-        self.listData.append(DataText(title: "Rotate Right", pressText: "q", releaseText: "", type: 1))
+        self.listData.append(DataText(title: "Stop all", pressText: "D", releaseText: "", type: 1))        
     }
     
     func convertBtnToJSON(item : DataText) -> String {
